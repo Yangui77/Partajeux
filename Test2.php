@@ -1,8 +1,4 @@
-<?php
-function get_header()
-{
-
-$header = <html>
+<html>
     <head> 
     	<meta charset="utf-8" />
 		<link rel="stylesheet" href="style.css" />
@@ -16,6 +12,4 @@ $header = <html>
 </ul>
 
     </head>;
-echo $header;
- }
- ?>
+ 
