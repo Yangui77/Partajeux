@@ -7,4 +7,3 @@ L'utilisateur pourra rechercher les jeux qu'il veut, l'application affichera les
 L'utilisateur pourra ensuite proposer un échange et attendra confirmation . 
 Lorsque l'échange s'effectue les utilisateurs confirment l'échange et les jeux deviennent indisponible.
 Lorsque la durée de l'échange est terminé les utilisateurs doivent confirmer le retour des jeux pour qu'ils redeviennent disponible dans l'application. 
- 
