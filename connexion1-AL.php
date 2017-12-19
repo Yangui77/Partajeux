@@ -4,7 +4,7 @@ Page: connexion1.php
 */
 session_start(); // à mettre tout en haut du fichier .php, cette fonction propre à PHP servira à maintenir la $_SESSION
 if(isset($_POST['cnx'])) { // si le bouton "Connexion" est appuyé
-    // on vérifie que le champ "Identifiant n'est pas vide
+    // on vérifie que le champ "Identifiant" n'est pas vide
     if(empty($_POST['id'])) {
         echo "Le champ Identifiant est vide.";
     } else {
