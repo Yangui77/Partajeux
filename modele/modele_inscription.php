@@ -21,7 +21,7 @@ function comparer_pseudo($Identifiant){
 
 // se connecter à la base de donnée
 $bdd = db_connect();
-// Récupération de tous le pseudos
+// Récupération de tous les pseudos
 $reponse = $bdd->query('SELECT Identifiant FROM Utilisateur ');
 //on compare tous les peudos avec le parametre $Identifiant
 while ($donnees = $reponse->fetch())

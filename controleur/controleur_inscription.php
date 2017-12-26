@@ -17,6 +17,7 @@ if(isset($_POST['inscription']))
         {
             echo 'Veuillez saisir un nouveau pseudo, il est soit vide soit déjà existant.';
         }
+        //Vérification du mdp
         elseif(empty($_POST['Mdp'])){
 
             echo 'Veuillez saisir un mot de passe';
@@ -30,12 +31,12 @@ if(isset($_POST['inscription']))
          
         // Si tout est ok on enregistre le membre
         else
-        {
+        {  // Enregistrement du membre dans la bdd
             ajout_membre($_POST['NomUtilisateur'],$_POST['Email'],$_POST['Mdp'],$_POST['Identifiant']);
 
              echo 'Vous avez été inscrit connectez vous <a href="./index.php"> ici </a> ';
              
-            // Enregistrement du membre dans la bdd
+            
            
         }      
 }
