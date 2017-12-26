@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.3
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : localhost
+-- Généré le :  mar. 26 déc. 2017 à 18:15
+-- Version du serveur :  5.6.35
+-- Version de PHP :  7.1.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données :  `Partajeux`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Utilisateur`
+--
+
+CREATE TABLE `Utilisateur` (
+  `NomUtilisateur` varchar(45) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Mdp` varchar(45) NOT NULL,
+  `Identifiant` varchar(45) NOT NULL,
+  `idUtilisateur` int(11) NOT NULL,
+  `Photo` blob
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `Utilisateur`
+--
+
+INSERT INTO `Utilisateur` (`NomUtilisateur`, `Email`, `Mdp`, `Identifiant`, `idUtilisateur`, `Photo`) VALUES
+('FUDITPHU', 'caca@gmail.com', 'caca', 'Yangui', 1, NULL),
+('caca', 'pipi@gmail.com', 'cacapipi', 'pipicaca', 3, NULL),
+('kiki', 'kiki@mgail.com', 'kiki', 'kiki', 6, NULL),
+('franck', 'dang@fran.com', 'dako', 'dako', 7, NULL),
+('bonjour', 'bonjour@gmail.com', 'djaio', 'djaio', 20, NULL),
+('naruto', 'sasuke@gmail.com', 'nani', 'dandaoi', 21, NULL),
+('FUDITPHU', 'moi@gmail.com', 'nani', 'kokokok', 25, NULL),
+('bonjour', 'bruh@gmail.com', 'blablabla', 'bruh', 26, NULL),
+('caca', 'caca@gmail.com', 'pipi', 'daidai', 27, NULL),
+('cnai', 'cani@gmail.com', 'danio', 'danio', 28, NULL),
+('cnazi', 'cani@gmail.com', 'coucou', 'cacacaca', 29, NULL),
+('penus', 'psaip@mgialc.com', 'caca', 'pouloulou', 30, NULL),
+('dzaji', 'zdjiap@gmaic.com', 'caca', 'naninanani', 31, NULL),
+('ckazo', 'cazko@gmail.com', 'caca', 'cacacacacaca', 32, NULL),
+('czako', 'cako@gmail.com', 'sasa', 'cacaprout', 33, NULL),
+('kiki', 'kiki@mgail.com', 'kiki', 'cacabe', 34, NULL),
+('ko', 'cako@gmail.com', 'dako', 'cacacaz', 35, NULL),
+('kiki', 'kiki@mgail.com', 'kiki', 'kikikiki', 36, NULL);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `Utilisateur`
+--
+ALTER TABLE `Utilisateur`
+  ADD PRIMARY KEY (`idUtilisateur`),
+  ADD UNIQUE KEY `Identifiant_UNIQUE` (`Identifiant`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `Utilisateur`
+--
+ALTER TABLE `Utilisateur`
+  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;

@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <html>
     <head> 
-      <?php include "functions.php" ?>
 
     	<meta charset="utf-8" />
 		  <link rel="stylesheet" href="style.css" />
@@ -16,8 +16,4 @@
   <li><a href="#" title="aller à la section 5">item5</a></li>
 </ul>
  </head>
- <body>
-<?php jeux(); ?>
-
-</body>
- 
+<body>
