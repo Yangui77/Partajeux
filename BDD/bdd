@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 26 déc. 2017 à 18:15
+-- Généré le :  mar. 26 déc. 2017 à 18:20
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -13,6 +13,73 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `Partajeux`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Echange`
+--
+
+CREATE TABLE `Echange` (
+  `idUtilisateur1` int(11) NOT NULL,
+  `idUtilisateur2` int(11) NOT NULL,
+  `Lieu` varchar(45) NOT NULL,
+  `Date` datetime NOT NULL,
+  `Durée` int(11) NOT NULL,
+  `idJeux` int(11) NOT NULL,
+  `Text` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Jeux`
+--
+
+CREATE TABLE `Jeux` (
+  `idJeux` int(11) NOT NULL,
+  `NomJeux` varchar(45) NOT NULL,
+  `Console` varchar(45) NOT NULL,
+  `Description` varchar(45) DEFAULT NULL,
+  `Année` varchar(45) DEFAULT NULL,
+  `Image` blob
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `Jeux`
+--
+
+INSERT INTO `Jeux` (`idJeux`, `NomJeux`, `Console`, `Description`, `Année`, `Image`) VALUES
+(1, 'The Legend of Zelda : Breath of the Wild', 'Nintendo Switch', 'The Legend of Zelda : Breath of the Wild est ', '2017', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `JeuxVoulu`
+--
+
+CREATE TABLE `JeuxVoulu` (
+  `idUtilisateur` int(11) NOT NULL,
+  `idJeux` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `JeuxVoulu`
+--
+
+INSERT INTO `JeuxVoulu` (`idUtilisateur`, `idJeux`) VALUES
+(1, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `PossedeJeux`
+--
+
+CREATE TABLE `PossedeJeux` (
+  `idJeux` int(11) NOT NULL,
+  `idUtilisateur` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -58,6 +125,35 @@ INSERT INTO `Utilisateur` (`NomUtilisateur`, `Email`, `Mdp`, `Identifiant`, `idU
 --
 
 --
+-- Index pour la table `Echange`
+--
+ALTER TABLE `Echange`
+  ADD KEY `caca` (`idJeux`),
+  ADD KEY `fk_num_client` (`idUtilisateur1`),
+  ADD KEY `fk_client_numero` (`idUtilisateur2`);
+
+--
+-- Index pour la table `Jeux`
+--
+ALTER TABLE `Jeux`
+  ADD PRIMARY KEY (`idJeux`),
+  ADD UNIQUE KEY `NomJeux_UNIQUE` (`NomJeux`);
+
+--
+-- Index pour la table `JeuxVoulu`
+--
+ALTER TABLE `JeuxVoulu`
+  ADD PRIMARY KEY (`idUtilisateur`,`idJeux`),
+  ADD KEY `idJeux_idx` (`idJeux`);
+
+--
+-- Index pour la table `PossedeJeux`
+--
+ALTER TABLE `PossedeJeux`
+  ADD PRIMARY KEY (`idUtilisateur`,`idJeux`),
+  ADD KEY `idJeux_idx` (`idJeux`);
+
+--
 -- Index pour la table `Utilisateur`
 --
 ALTER TABLE `Utilisateur`
@@ -69,7 +165,41 @@ ALTER TABLE `Utilisateur`
 --
 
 --
+-- AUTO_INCREMENT pour la table `Jeux`
+--
+ALTER TABLE `Jeux`
+  MODIFY `idJeux` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT pour la table `Utilisateur`
 --
 ALTER TABLE `Utilisateur`
   MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `Echange`
+--
+ALTER TABLE `Echange`
+  ADD CONSTRAINT `caca` FOREIGN KEY (`idJeux`) REFERENCES `Jeux` (`idJeux`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_client_numero` FOREIGN KEY (`idUtilisateur2`) REFERENCES `Utilisateur` (`idUtilisateur`),
+  ADD CONSTRAINT `fk_num_client` FOREIGN KEY (`idUtilisateur1`) REFERENCES `Utilisateur` (`idUtilisateur`);
+
+--
+-- Contraintes pour la table `JeuxVoulu`
+--
+ALTER TABLE `JeuxVoulu`
+  ADD CONSTRAINT `evzevz` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`),
+  ADD CONSTRAINT `fdd` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`),
+  ADD CONSTRAINT `fk` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`),
+  ADD CONSTRAINT `fkazok` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`),
+  ADD CONSTRAINT `jeuxvoulu_ibfk_1` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`),
+  ADD CONSTRAINT `kkkk` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`);
+
+--
+-- Contraintes pour la table `PossedeJeux`
+--
+ALTER TABLE `PossedeJeux`
+  ADD CONSTRAINT `idJeux` FOREIGN KEY (`idJeux`) REFERENCES `Jeux` (`idJeux`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `idUtilisateur` FOREIGN KEY (`idUtilisateur`) REFERENCES `Utilisateur` (`idUtilisateur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
