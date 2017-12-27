@@ -1,5 +1,4 @@
 <?php 
-echo 'modele inscription';
 include_once('libs.php');
 
 //ajouter un membre à la base de donnée

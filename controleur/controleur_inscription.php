@@ -41,8 +41,3 @@ if(isset($_POST['inscription']))
         }      
 }
  
-// S'il n'y a pas d'inscription en cours alors on affiche le formulaire
-else
-{
-    include_once('./inscription.php');
-}

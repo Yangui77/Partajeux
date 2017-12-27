@@ -15,4 +15,18 @@ function db_connect()
 	}
 }
 
+
+function get_id($Identifiant){
+	$bdd = db_connect();
+	$reponse = $bdd->prepare('SELECT idUtilisateur FROM Utilisateur WHERE Identifiant = :Identifiant');
+	$reponse->execute(array('Identifiant' => $Identifiant));
+	
+	while($donnees = $reponse->fetch())
+	{
+		return $donnees['idUtilisateur'];
+	}
+	
+}
+
+
 ?>

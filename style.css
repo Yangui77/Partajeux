@@ -23,3 +23,27 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+/*Le bonjour dans la barre de menu */
+.hello{
+position: absolute;
+top: 1.5em;
+right:2em;
+color :white;
+
+}
+/* bouton de déconnexion*/
+.deconnexion{
+color:white;
+text-decoration: none;
+}
+
+.deconnexion:hover {
+color:grey;
+
+}
+h1{
+font-size: 2em;
+
+
+}

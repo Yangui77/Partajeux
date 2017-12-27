@@ -29,7 +29,7 @@ if(isset($_POST['connexion']))
         // si les identifiants et mdp sont bon
         if ($valid_connexion){
         $_SESSION['Identifiant'] = $_POST['Identifiant'];
-        echo 'Vous êtes connecté' ;
+        $_SESSION['Id'] = get_id($_SESSION['Identifiant']);
         }
         //si ils sont mauvais
         else echo 'Identifiant ou mot de passe incorrect';

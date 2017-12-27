@@ -14,6 +14,6 @@
   <li><a href="#" title="aller à la section 3">item3</a></li>
   <li><a href="#" title="aller à la section 4">item4</a></li>
   <li><a href="#" title="aller à la section 5">item5</a></li>
-</ul>
+        </ul>
  </head>
 <body>
