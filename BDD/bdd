@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 26 déc. 2017 à 18:20
+-- Généré le :  mer. 27 déc. 2017 à 18:58
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -40,7 +40,7 @@ CREATE TABLE `Jeux` (
   `idJeux` int(11) NOT NULL,
   `NomJeux` varchar(45) NOT NULL,
   `Console` varchar(45) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
+  `Description` varchar(1000) DEFAULT NULL,
   `Année` varchar(45) DEFAULT NULL,
   `Image` blob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -50,7 +50,9 @@ CREATE TABLE `Jeux` (
 --
 
 INSERT INTO `Jeux` (`idJeux`, `NomJeux`, `Console`, `Description`, `Année`, `Image`) VALUES
-(1, 'The Legend of Zelda : Breath of the Wild', 'Nintendo Switch', 'The Legend of Zelda : Breath of the Wild est ', '2017', '');
+(1, 'The Legend of Zelda : Breath of the Wild', 'Nintendo Switch', 'The Legend of Zelda : Breath of the Wild est un jeu d\'action/aventure. Link se réveille d\'un sommeil de 100 ans dans un royaume d\'Hyrule dévasté. Il lui faudra percer les mystères du passé et vaincre Ganon, le fléau. L\'aventure prend place dans un gigantesque monde ouvert et accorde ainsi une part importante à l\'exploration. Le titre a été pensé pour que le joueur puisse aller où il veut dès le début, s\'éloignant de la linéarité habituelle de la série.', '2017', ''),
+(2, 'FIFA 18', 'Nintendo Switch', 'EA SPORTS™ FIFA 18 sur Nintendo Switch est le jeu de football le plus immersif, le plus axé sur les réseaux sociaux et le plus authentique jamais créé pour les possesseurs de consoles Nintendo. Le jeu regorge de fonctionnalités, et vous pouvez désormais affronter le monde entier où, quand et avec qui vous le souhaitez de manières uniques avec EA SPORTS™ FIFA 18 sur Nintendo Switch.\r\n', '2017', NULL),
+(3, 'Rocket League', 'Nintendo Switch', 'Rendez-vous sur le terrain pour expérimenter un mode hors ligne complet, de multiples types de jeux, des matchs en ligne* pour le fun ou compétitifs et les \"Mutators\" spéciaux qui vous permettent de totalement changer les règles du jeu.\r\n\r\nExprimez-vous grâce au riche système de customisation et affrontez vos adversaires qui jouent sur d\'autres plateformes* !\r\n\r\nCe n\'est pas tout ! Des voitures de combat à l\'effigie de Mario, Luigi et Metroid vont débarquer dans Rocket League, sur Nintendo Switch!\r\n', '2017', NULL);
 
 -- --------------------------------------------------------
 
@@ -80,6 +82,14 @@ CREATE TABLE `PossedeJeux` (
   `idJeux` int(11) NOT NULL,
   `idUtilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `PossedeJeux`
+--
+
+INSERT INTO `PossedeJeux` (`idJeux`, `idUtilisateur`) VALUES
+(1, 1),
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -168,7 +178,7 @@ ALTER TABLE `Utilisateur`
 -- AUTO_INCREMENT pour la table `Jeux`
 --
 ALTER TABLE `Jeux`
-  MODIFY `idJeux` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idJeux` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `Utilisateur`
 --

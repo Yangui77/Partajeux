@@ -59,13 +59,11 @@ width: 40%;
 margin-left: 1em;
 float: left;
 }
+
 .jeu{
-height:250px;
-overflow: scroll;
+    margin-bottom:2em;
 }
-
-
-input[type=Email], input[type=text], select {
+input[type=password],input[type=Email], input[type=text], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -94,7 +92,9 @@ input[type=submit]:hover {
     float:left;
     margin-left: 2em;
     width: 40%;
+}
 
-
+.titre-centré{
+text-align: center;
 
 }
