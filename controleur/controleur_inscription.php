@@ -31,9 +31,6 @@ if(isset($_POST['inscription']))
             ajout_membre($_POST['NomUtilisateur'],$_POST['Email'],$_POST['Mdp'],$_POST['Identifiant']);
             $_SESSION['inscris'] = 'inscris';
              
-             
-            
-           
         }      
 
 }

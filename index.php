@@ -3,7 +3,7 @@
 session_start();
 
 require('vue/header.php');
-
+require('vue/barre_de_recherche.php');
 
 if (!isset($_SESSION['Identifiant']))
 {	 

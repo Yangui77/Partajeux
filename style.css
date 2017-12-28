@@ -98,12 +98,60 @@ input[type=submit]:hover {
 text-align: center;
 
 }
-
+/*Message d'erreur dans les logs (connexion et inscription)*/
 .error{
 color:red;
 
 }
+
 #bad_id, #bad_mdp, #mauvais_log{
 display: none;
 
+}
+#search, #resultat_recherche{
+width: 200px;
+}
+#resultat_recherche li{
+    list-style-type: none; 
+    width: 99%;
+    height:25px;
+    border:1px solid #000;
+}
+#resultat_recherche ul{
+     background-color: white;
+     position: relative;
+     top:-20px;
+}
+#resultat_recherche ul li a{
+
+    color:#000;
+    padding-top:0;
+    padding-left:1em;
+    padding-right: 1em;
+    height:50%;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    
+}
+#resultat_recherche ul li a:hover
+{
+    background-color:grey;
+    width: 100%;
+    color: black;
+
+
+}
+#form .p{
+    color:black;
+}
+#search{
+    height:20px;
+    font-size: 1em;
+    padding: 0;
+}
+#form_recherche{
+    position : absolute;
+    left: 20em;
+    top: 0em;
 }
