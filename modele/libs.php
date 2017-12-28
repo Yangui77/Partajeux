@@ -4,7 +4,7 @@
 function db_connect()
 {
     try
-	{
+	{	
     	$bdd = new PDO('mysql:host=localhost;dbname=Partajeux;charset=utf8', 'root', 'root');
     	return $bdd;
 	}
@@ -15,7 +15,7 @@ function db_connect()
 	}
 }
 
-
+//renvoie l'id de l'utilisateur avec en paramètre son pseudo
 function get_id($Identifiant){
 	$bdd = db_connect();
 	$reponse = $bdd->prepare('SELECT idUtilisateur FROM Utilisateur WHERE Identifiant = :Identifiant');

@@ -98,3 +98,12 @@ input[type=submit]:hover {
 text-align: center;
 
 }
+
+.error{
+color:red;
+
+}
+#bad_id, #bad_mdp, #mauvais_log{
+display: none;
+
+}

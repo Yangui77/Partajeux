@@ -15,7 +15,7 @@ function ajout_membre($NomUtilisateur,$Email,$Mdp,$Identifiant)
 }
 
 
-
+//compare le pseudo en paramètre à ceux de la base de donnée renvoie true s'il n'y a pas déjà le pseudo
 function comparer_pseudo($Identifiant){
 
 // se connecter à la base de donnée

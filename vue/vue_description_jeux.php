@@ -1,1 +1,5 @@
-<h1>Détail du jeu : </h1> 
+<?php
+
+
+
+?>
