@@ -5,10 +5,10 @@ include_once('modele/modele_inscription.php');
 if(isset($_POST['inscription']))
 {
     // On rend inoffensif les données de l'utilisateur
-    $_POST['NomUtilisateur'] = htmlspecialchars($_POST['NomUtilisateur']);
+    $_POST['NomUtilisateur'] = strtolower(htmlspecialchars($_POST['NomUtilisateur']));
     $_POST['Email'] = htmlspecialchars($_POST['Email']);
     $_POST['Mdp'] = htmlspecialchars($_POST['Mdp']);
-    $_POST['Identifiant'] = htmlspecialchars($_POST['Identifiant']);
+    $_POST['Identifiant'] = strtolower(htmlspecialchars($_POST['Identifiant']));
      
     $Test_pseudo = comparer_pseudo($_POST['Identifiant']);
     

@@ -6,7 +6,7 @@ include_once('modele/modele_connexion.php');
 if(isset($_POST['connexion']))
 {
 
-    $_POST['Identifiant'] = htmlspecialchars($_POST['Identifiant']);
+    $_POST['Identifiant'] = strtolower(htmlspecialchars($_POST['Identifiant']));
     $_POST['Mdp'] = htmlspecialchars($_POST['Mdp']);
     
     // valeur qui indique si la connexion est valide ou non
@@ -16,6 +16,7 @@ if(isset($_POST['connexion']))
         if ($valid_connexion){
         $_SESSION['Identifiant'] = $_POST['Identifiant'];
         $_SESSION['Id'] = get_id($_SESSION['Identifiant']);
+        
         }
         //si ils sont mauvais on active le message d'erreur sur la vue
         else ?>  <script> afficher("mauvais_log"); </script> <?php
