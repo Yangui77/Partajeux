@@ -14,6 +14,16 @@ ul {
     background-color: #333;
   
 }
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 
 li {
     float: left;
@@ -129,6 +139,13 @@ color:red;
 display: none;
 
 }
+#mauvais_log{
+    position: absolute;
+    top: 1.7em;
+    left: 20em;
+    color:white;
+}
+
 #search, #resultat_recherche{
 width: 500px;
 }
@@ -174,11 +191,29 @@ width: 500px;
 #form_recherche{
     position : absolute;
     left: 20em;
-    top: 0.5em;
+    top:0;
+}
+#Identifiant{
+padding: 0;
+margin: 0;
+width: 150px;
+}
+#Mdp{
+    display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
 }
 #reponse_jeux{
-    position: relative;
-    top:-10px;
+
+width: 100%;
+background-color: #333;
+color: white;
+height: 40px;
+border-radius: 4px;
+}
+#reponse_jeux:hover{
+    background-color: grey;
 }
 .form_jeux{
     height:40px;

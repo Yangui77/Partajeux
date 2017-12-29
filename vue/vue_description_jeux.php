@@ -1,6 +1,7 @@
 <?php
 $Jeux = info_jeux($_POST['jeux']);
 foreach ($Jeux as $Jeu ): 
+	$_SESSION['jeux_voulu'] = $Jeu['idJeux'];
 ?>
 <div class="page_jeux">
 <h2><?php echo $Jeu['NomJeux']; ?>
@@ -14,6 +15,10 @@ foreach ($Jeux as $Jeu ):
 <?php echo $Jeu['Description'];?></div>
 </div>
 
+<form action="index.php" method="post" class="form_jeux">
+ <input id="reponse_jeux" type="submit" value="Je veux ce jeux" name="ajoutjeux" />
+ </form>
 
-<?php endforeach; ?>
+<?php endforeach; 
 
+?>
