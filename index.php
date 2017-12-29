@@ -11,11 +11,11 @@ if (!isset($_SESSION['Identifiant']))
     require('vue/vue_connexion.php');
 
 }
-
+include('controleur/controleur_user.php');
 
 include('controleur/controleur_mes_jeux.php');
 include('controleur/controleur_description_jeux.php');
-include('controleur/controleur_user.php');
+
 include('controleur/controleur_connexion.php');
 include('controleur/controleur_inscription.php');
 

@@ -38,7 +38,7 @@ position: absolute;
 top: 1.5em;
 right:2em;
 color :white;
-
+width:300px;
 }
 /* bouton de déconnexion*/
 .deconnexion{
@@ -46,10 +46,6 @@ color:white;
 text-decoration: none;
 }
 
-.deconnexion:hover {
-color:grey;
-
-}
 h1{
 font-size: 2em;
 }
@@ -73,7 +69,7 @@ input[type=password],input[type=Email], input[type=text], select {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit],.deconnexion {
     width: 100%;
     background-color: #333;
     color: white;
@@ -84,7 +80,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+.deconnexion:hover ,input[type=submit]:hover {
     background-color: grey;
 }
 
@@ -162,4 +158,25 @@ width: 500px;
 .form_jeux{
     height:40px;
 
+}
+#deconnexion{
+    width: 40%;
+    float: right;
+     height:45px;
+     border-radius: 4px;
+     padding: 4px;
+}
+
+.deconnexion{
+
+    padding:14px 10px;
+    height:inherit;
+    font-size:12px;
+}
+.lien_mes_jeux{
+    position: relative;
+    top:-40px;
+    width: 45%;
+    float:left;
+    padding :25px 10px;
 }
