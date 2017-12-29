@@ -1,14 +1,15 @@
-<form action="./index.php" method="post" class="form">
-	<H1 class="titre-centré">Connexion</H1>
+<form action="index.php" method="post" class="form_connexion">
         <p>
-        <label for="Idenfiant">Identifiant</label> : </br>
-        <input type="text"  name="Identifiant" id="Identifiant" required /><br />
-        <label for="Mdp">Mot de passe</label> :  </br>
-        <input type="password" name="Mdp" id="Mdp" required /><br />
-        <br/>
-        <input type="submit" value="CONNEXION" name="connexion" />
+        <label class="white" for="Idenfiant">Identifiant</label> : 
+        <input type="text"  name="Identifiant" id="Identifiant" required />   
+        <label class="white" for="Mdp">Mot de passe</label> :  
+        <input type="password" name="Mdp" id="Mdp" required />
+        <input class="envoyer" type="submit" value="se connecter" name="connexion" />
+
         <div id="mauvais_log" class ="error">
-         Vos identifiants ne sont pas bon
+         Vos identifiants ne sont pas bon 
         </div>
-	</p>
-</form>
+	</p></form>
+    <form action="index.php" method="post" class="inscription">
+        <input class="envoyer" type="submit" value="s'inscrire" name="inscription"/>
+    </form>

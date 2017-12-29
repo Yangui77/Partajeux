@@ -1,5 +1,6 @@
 <?php 
+include('modele/modele_description_jeux.php');
 if(isset($_POST['jeux'])){
-	echo "<h1> page de ".$_POST['jeux']."</h1>";
+	include('vue/vue_description_jeux.php');
 } 
 ?>

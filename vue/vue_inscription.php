@@ -1,5 +1,5 @@
 
- <form action="./index.php" method="post" class = "form">
+ <form action="index.php" method="post" class = "form">
  		 <H1 class="titre-centré">Inscription</H1>
         <p>
         <label for="NomUtilisateur">Nom d'utilisateur</label> : </br><input type="text" name="NomUtilisateur" id="NomUtilisateur" required/><br />
@@ -10,11 +10,10 @@
         Les deux mots de passes sont différents</div>
       
         <label for="Identifiant">Identifiant</label> : </br> <input type="text" name="Identifiant" id="Identifiant" required />
+        </br>
         <div id="bad_id" class ="error">
          Votre Identifiant est déjà utilisé
         </div>
-
-
         <input type="submit" value="INSCRIPTION" name="inscription" />
 	</p>
 </form>

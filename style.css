@@ -55,39 +55,64 @@ width: 40%;
 margin-left: 1em;
 float: left;
 }
+.mes_jeux_voulu{
+width: 40%;
+margin-left: 1em;
+float: right;
+
+}
 
 .jeu{
     margin-bottom:2em;
 }
-input[type=password],input[type=Email], input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
-input[type=submit],.deconnexion {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.deconnexion:hover ,input[type=submit]:hover {
-    background-color: grey;
+.inscription{
+    position:absolute;
+    right:3em;
+    top:1.5em;
 }
 
 .form{
     float:left;
     margin-left: 2em;
     width: 40%;
+}
+.form_connexion{
+    height: 60px;
+    position: absolute;
+    top: 0.5em;
+    left: 35em;
+}
+.white{
+    color:white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.envoyer{
+    margin-left: 15px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    border:1px solid #333;
+    height:30px;
+}
+.envoyer:hover{
+    background-color: grey;
+}
+#form_mes_jeux {
+    border: none;
+    color: white;
+    background-color: #333;
+    padding: 15px 10px;
+    position: relative;
+    top:8px;
+    border-radius: 4px;
+}
+.deconnexion{
+    border-radius: 4px;
+}
+#form_mes_jeux:hover , .deconnexion:hover{
+   background-color: grey;
 }
 
 .titre-centré{
@@ -149,7 +174,7 @@ width: 500px;
 #form_recherche{
     position : absolute;
     left: 20em;
-    top: 0em;
+    top: 0.5em;
 }
 #reponse_jeux{
     position: relative;
@@ -179,4 +204,25 @@ width: 500px;
     width: 45%;
     float:left;
     padding :25px 10px;
+}
+.page_jeux{
+    margin:15%;
+    margin-top:0;
+    width:70%;
+    text-align: center;
+}
+.Description_jeux{
+    text-align: left;
+}
+#lien_page_jeux{
+background-color: white;
+color:black;
+text-align: left;
+padding: 0;
+font-size: 20px;
+font-weight: bold;
+border: none;
+}
+#lien_page_jeux:hover{
+    text-decoration: underline;
 }

@@ -16,6 +16,7 @@ if(isset($_POST['inscription']))
         // Verification du pseudo
         if($Test_pseudo)
         { 
+           
           ?>  <script> afficher("bad_id"); </script> <?php
             
         }
