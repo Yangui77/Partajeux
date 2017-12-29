@@ -1,7 +1,3 @@
-<?php 
-include_once('modele/modele_user.php');?>
-
-
 <div class="hello"><?php echo 'Bonjour '. $_SESSION['Identifiant'];?>
 	<a class="deconnexion" href="vue/deconnexion.php">Déconnexion</a>
 </div>

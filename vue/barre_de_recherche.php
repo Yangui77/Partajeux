@@ -7,10 +7,6 @@
 </form>
 	<div id="resultat_recherche">
 		<ul>
-			<li><a href=""> bla</a></li>
-			<li><a href=""> bla</a></li>
-
-			
 
 		</ul>
 	</div>

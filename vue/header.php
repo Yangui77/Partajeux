@@ -4,7 +4,9 @@
 
     	<meta charset="utf-8" />
 		  <link rel="stylesheet" href="style.css" />
+      <script type="text/javascript" src="javascript/jquery.js"></script>
       <script type="text/javascript" src="javascript/javascript.js"></script>
+
  
         <title>Partajeux</title>
         

@@ -1,7 +1,6 @@
 <?php
 include_once('libs.php');
 
-
 //retourne un array avec les jeux de l'utilisateur avec en parametre son id
 function jeux($id){
 	$bdd = db_connect();

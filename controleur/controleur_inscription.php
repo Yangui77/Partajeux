@@ -1,6 +1,6 @@
 <?php
 
-include('modele/modele_inscription.php');
+include_once('modele/modele_inscription.php');
 // Chargement des fichiers modèles fonctions enregistrement_membre($pseudo, $pass_hash, $email) et check_bdd($pseudo)
 if(isset($_POST['inscription']))
 {

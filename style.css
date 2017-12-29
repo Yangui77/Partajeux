@@ -109,7 +109,7 @@ display: none;
 
 }
 #search, #resultat_recherche{
-width: 200px;
+width: 500px;
 }
 #resultat_recherche li{
     list-style-type: none; 
@@ -154,4 +154,12 @@ width: 200px;
     position : absolute;
     left: 20em;
     top: 0em;
+}
+#reponse_jeux{
+    position: relative;
+    top:-10px;
+}
+.form_jeux{
+    height:40px;
+
 }
