@@ -62,9 +62,10 @@ font-size: 2em;
 
 .MesJeux{
 width: 40%;
-margin-left: 1em;
+margin-left: 6em;
 float: left;
 }
+
 .mes_jeux_voulu{
 width: 40%;
 margin-left: 1em;
@@ -251,6 +252,10 @@ border-radius: 4px;
 }
 .Description_jeux{
     text-align: left;
+}
+.Description{
+    height:100px;
+    overflow: scroll;
 }
 #lien_page_jeux{
 background-color: white;

@@ -27,6 +27,23 @@ function get_id($Identifiant){
 	}
 	
 }
+function get_id_jeux($NomJeux){
+
+	$bdd = db_connect();
+	$reponse = $bdd->prepare('SELECT idJeux FROM Jeux WHERE NomJeux = :NomJeux');
+    $reponse->execute(array('NomJeux' => $NomJeux));
+
+	$donnees = $reponse->fetch();
+	echo $donnees['idJeux'];
+
+}
+function get_console($idJeux){
+  $bdd = db_connect();
+  $reponse = $bdd->prepare('SELECT NomConsole FROM Console NATURAL JOIN ConsoleDispo NATURAL JOIN Jeux WHERE idJeux = :idJeux');
+  $reponse->execute(array('idJeux' => $idJeux));
+  $donnees = $reponse->fetchALL();
+  return $donnees;
+}
 
 
 ?>
