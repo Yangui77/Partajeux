@@ -16,7 +16,7 @@ foreach ($Jeux as $Jeu ):
 </div>
 
 <form action="index.php" method="post" class="form_jeux">
- <input id="reponse_jeux" type="submit" value="Je veux ce jeux" name="ajoutjeux" />
+ <input id="reponse_jeux" type="submit" value="ajouter ce jeu à ma collection" name="ajouter_jeux" />
  </form>
 
 <?php endforeach; 

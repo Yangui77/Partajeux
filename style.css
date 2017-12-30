@@ -204,6 +204,9 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 }
+#idJeux_mes_jeux{
+display:none;
+}
 #reponse_jeux{
 
 width: 100%;

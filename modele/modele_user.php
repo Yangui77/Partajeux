@@ -11,3 +11,13 @@ function jeux($id){
 	return $result;
     }
 
+function get_id_jeux($NomJeux){
+	
+	$bdd = db_connect();
+	$reponse = $bdd->prepare('SELECT idJeux FROM Jeux WHERE NomJeux = :NomJeux');
+    $reponse->execute(array('NomJeux' => $NomJeux));
+
+	$donnees = $reponse->fetch();
+	echo $donnees['idJeux'];
+
+}
