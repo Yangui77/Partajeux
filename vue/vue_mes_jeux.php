@@ -2,9 +2,10 @@
 </br>
 <div class="MesJeux">
 	<h1 class="titre-centré">VOS JEUX</h1>
+<!-- On stock dans $Jeux toutes les infos des jeux possédés par l'utilisateur -->
 <?php
 $Jeux = jeux($_SESSION['Id'],'PossedeJeux');
-
+//on les afficher sur la page
 foreach ($Jeux as $Jeu ): 
 ?>
 <div class="jeu">
@@ -13,11 +14,10 @@ foreach ($Jeux as $Jeu ):
 
  </form>
 <h4>Année : <?php echo $Jeu['Année'] ;?> </h4>
-<h4>Console :  <?php 
-$allconsole = get_console($Jeu['idJeux']);
-
-foreach ($allconsole as $console) {
-echo $console['NomConsole'] . "   ";
+<h4>Console : <?php 
+$console_possede = get_console_jeux($_SESSION['Id'],$Jeu['idJeux'],'PossedeJeux');
+foreach($console_possede as $Console){
+	echo $Console['NomConsole'] . " /  ";
 }
 ?>
 

@@ -22,10 +22,22 @@ echo $console['NomConsole'] . "   ";
 <img src="image/<?php echo $Jeu['idJeux']; ?>.jpg">
 <h4>Description : </h4>
 <?php echo $Jeu['Description'];?></div>
-<form action="index.php" method="post" class="form_jeux">
+<form action="index.php" method="post" class="form_jeux_description">
+<?php foreach ($allconsole as $console) {?>
+
+	<INPUT type="checkbox" name="<?php echo $console['idConsole'] ?>" value="<?php echo $console['idConsole'] ?>"> <?php echo $console['NomConsole']; 
+}
+?>
+
 <input id="reponse_jeux" type="submit" value="ajouter ce jeu à ma collection" name="ajouter_jeux" />
 </form>
-<form action="index.php" method="post" class="form_jeux">
+
+<form action="index.php" method="post" class="form_jeux_description">
+	<?php foreach ($allconsole as $console) {?>
+	<INPUT type="checkbox" name="<?php echo $console['idConsole'] ?>" value="<?php echo $console['idConsole'] ?>"> <?php echo $console['NomConsole']; 
+}
+?>
+
 <input id="reponse_jeux" type="submit" value="ajouter ce jeu à mes jeux voulu" name="ajouter_jeux_voulu" />
 </form>
 

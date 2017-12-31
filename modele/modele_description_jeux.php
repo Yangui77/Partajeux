@@ -11,4 +11,11 @@ function info_jeux($NomJeux){
     }
 
 
-
+//retourne toutes les consoles qui peuvent utiliser le jeux en fonction de l'id du jeux
+function get_console($idJeux){
+  $bdd = db_connect();
+  $reponse = $bdd->prepare('SELECT NomConsole, idConsole FROM Console NATURAL JOIN ConsoleDispo NATURAL JOIN Jeux WHERE idJeux = :idJeux');
+  $reponse->execute(array('idJeux' => $idJeux));
+  $donnees = $reponse->fetchALL();
+  return $donnees;
+}

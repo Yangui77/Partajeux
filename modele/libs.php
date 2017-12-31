@@ -27,6 +27,7 @@ function get_id($Identifiant){
 	}
 	
 }
+//renvoie l'id du jeux avec en paramètre le nom du jeux
 function get_id_jeux($NomJeux){
 
 	$bdd = db_connect();
@@ -37,13 +38,8 @@ function get_id_jeux($NomJeux){
 	echo $donnees['idJeux'];
 
 }
-function get_console($idJeux){
-  $bdd = db_connect();
-  $reponse = $bdd->prepare('SELECT NomConsole FROM Console NATURAL JOIN ConsoleDispo NATURAL JOIN Jeux WHERE idJeux = :idJeux');
-  $reponse->execute(array('idJeux' => $idJeux));
-  $donnees = $reponse->fetchALL();
-  return $donnees;
-}
+
+
 
 
 ?>

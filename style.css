@@ -219,9 +219,12 @@ border-radius: 4px;
 #reponse_jeux:hover{
     background-color: grey;
 }
-.form_jeux{
+.form_jeux, .form_jeux_description{
     height:40px;
+    }
+.form_jeux_description{ 
 
+    margin-bottom: 30px;
 }
 #deconnexion{
     width: 40%;

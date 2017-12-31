@@ -13,12 +13,12 @@ foreach ($Jeux as $Jeu ):
  </form>
 <h4>Année : <?php echo $Jeu['Année'] ;?> </h4>
 <h4>Console :  <?php 
-$allconsole = get_console($Jeu['idJeux']);
-
-foreach ($allconsole as $console) {
-echo $console['NomConsole'] . "   ";
+$console_possede = get_console_jeux($_SESSION['Id'],$Jeu['idJeux'],'JeuxVoulu');
+foreach($console_possede as $Console){
+	echo $Console['NomConsole'] . " /  ";
 }
 ?>
+
 </h4>
 <h4>Description : </h4><div class="Description">
 <?php echo $Jeu['Description'];?>
