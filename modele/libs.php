@@ -5,7 +5,7 @@ function db_connect()
 {
     try
 	{	
-    	$bdd = new PDO('mysql:host=localhost;dbname=Partajeux;charset=utf8', 'root', 'root');
+    	$bdd = new PDO('mysql:host=localhost;dbname=Partajeux;charset=utf8', 'root', '');
     	return $bdd;
 	}
 	
