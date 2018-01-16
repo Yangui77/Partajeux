@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 02 jan. 2018 à 17:11
+-- Généré le :  mar. 16 jan. 2018 à 15:38
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -66,8 +66,8 @@ INSERT INTO `ConsoleDispo` (`idConsole`, `idJeux`) VALUES
 --
 
 CREATE TABLE `Echange` (
-  `idUtilisateur1` int(11) NOT NULL,
-  `idUtilisateur2` int(11) NOT NULL,
+  `idTransaction1` int(11) NOT NULL,
+  `idTransaction2` int(11) NOT NULL,
   `Lieu` varchar(45) NOT NULL,
   `Date` datetime NOT NULL,
   `Durée` int(11) NOT NULL,
@@ -114,12 +114,8 @@ CREATE TABLE `JeuxVoulu` (
 --
 
 INSERT INTO `JeuxVoulu` (`idUtilisateur`, `idJeux`, `idConsole`) VALUES
-(1, 3, 1),
 (3, 1, 1),
-(42, 2, 3),
-(1, 2, 1),
-(1, 2, 3),
-(42, 3, 2);
+(1, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -138,12 +134,21 @@ CREATE TABLE `PossedeJeux` (
 --
 
 INSERT INTO `PossedeJeux` (`idJeux`, `idUtilisateur`, `idConsole`) VALUES
-(1, 1, 1),
-(2, 1, 2),
-(1, 42, 1),
-(2, 42, 1),
-(2, 42, 2),
-(2, 42, 3);
+(1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Transaction`
+--
+
+CREATE TABLE `Transaction` (
+  `IdUtilisateur1` int(11) NOT NULL,
+  `idUtilisateur2` int(11) NOT NULL,
+  `idJeux1` int(11) NOT NULL,
+  `idJeux2` int(11) NOT NULL,
+  `idTransaction` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -210,15 +215,7 @@ ALTER TABLE `Console`
 ALTER TABLE `ConsoleDispo`
   ADD PRIMARY KEY (`idConsole`,`idJeux`);
 
---
--- Index pour la table `Echange`
---
-ALTER TABLE `Echange`
-  ADD KEY `caca` (`idJeux`),
-  ADD KEY `fk_num_client` (`idUtilisateur1`),
-  ADD KEY `fk_client_numero` (`idUtilisateur2`);
 
---
 -- Index pour la table `Jeux`
 --
 ALTER TABLE `Jeux`
@@ -237,6 +234,12 @@ ALTER TABLE `JeuxVoulu`
 ALTER TABLE `PossedeJeux`
   ADD KEY `idJeux` (`idJeux`),
   ADD KEY `idUtilisateur` (`idUtilisateur`);
+
+--
+-- Index pour la table `Transaction`
+--
+ALTER TABLE `Transaction`
+  ADD PRIMARY KEY (`idTransaction`);
 
 --
 -- Index pour la table `Utilisateur`
@@ -260,21 +263,19 @@ ALTER TABLE `Console`
 ALTER TABLE `Jeux`
   MODIFY `idJeux` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT pour la table `Transaction`
+--
+ALTER TABLE `Transaction`
+  MODIFY `idTransaction` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `Utilisateur`
 --
 ALTER TABLE `Utilisateur`
-  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 --
 -- Contraintes pour les tables déchargées
 --
 
---
--- Contraintes pour la table `Echange`
---
-ALTER TABLE `Echange`
-  ADD CONSTRAINT `caca` FOREIGN KEY (`idJeux`) REFERENCES `Jeux` (`idJeux`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_client_numero` FOREIGN KEY (`idUtilisateur2`) REFERENCES `Utilisateur` (`idUtilisateur`),
-  ADD CONSTRAINT `fk_num_client` FOREIGN KEY (`idUtilisateur1`) REFERENCES `Utilisateur` (`idUtilisateur`);
 
 --
 -- Contraintes pour la table `JeuxVoulu`
