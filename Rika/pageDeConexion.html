@@ -6,74 +6,77 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 <body>
 
-<div class="w3-cell-row">
-	<div class="w3-container w3-cell w3-mobile">
+<div class="w3-container w3-teal">
 	  <h1>Bienvenue au Parta'jeux</h1>
-	  <p><!-- registration form-->
-		<form action="pageDAccueil.php" method="post">
-		<fieldset>
-		  <legend><h2>Inscription:</h2></legend>
-		  Nom utilisateur:<br>
-		  <input type="text" name="userName" placeholder="username" required><br>
-		  <!-- TODO: check if user name is already taken
-		  !!!
-		  -->
-		  <br>
-		  Adresse mail:<br>
-		  <input type="email" name="userMail1" placeholder="example@example.com" required><br>
-		  <!-- TODO:
-		  check if email address is already used
-		  !!!
-		  -->
-		  Adresse mail (verification):<br>
-		  <input type="email" name="userMail2" placeholder="example@example.com" required><br>
-		  
-		  <!-- check if the two email addresses are the same-->
-		  <?php
-		  if("userMail2" != "userMail1"){
-			echo "The two email addresses are not the same."
-		  }
-		  ?>
-		  <br>
-		  Mot de passe:<br>
-		  <input type="password" name="password1" required><br>
-		  Mot de passe (verification):<br>
-		  <input type="password" name="password2" required><br>
-		  <!-- check if the two passwords are the same-->
-		  <br>
-		  <?php
-		  if("password2" != "password1"){
-		  echo "The two passwords are not the same"
-		  }
-		  ?>
-		  <input type="submit" value="Valider">
-		  </fieldset>
-		</form>
-		</section>
-		<br>
-		<br>
+</div>
+	
+<div class="w3-cell-row">
+	<div class="w3-container w3-cell w3-mobile" style="width:35%">
+		  <p><!-- registration form-->
+			<form action="pageDAccueil.php" method="post">
+			<fieldset>
+			  <legend><h2>Inscription:</h2></legend>
+			  Nom utilisateur:<br>
+			  <input type="text" name="userName" placeholder="username" required><br>
+			  <!-- TODO: check if user name is already taken
+			  !!!
+			  -->
+			  <br>
+			  Adresse mail:<br>
+			  <input type="email" name="userMail1" placeholder="example@example.com" required><br>
+			  <!-- TODO:
+			  check if email address is already used
+			  !!!
+			  -->
+			  Adresse mail (verification):<br>
+			  <input type="email" name="userMail2" placeholder="example@example.com" required><br>
+			  
+			  <!-- check if the two email addresses are the same-->
+			  <?php
+			  if("userMail2" != "userMail1"){
+				echo "The two email addresses are not the same."
+			  }
+			  ?>
+			  <br>
+			  Mot de passe:<br>
+			  <input type="password" name="password1" required><br>
+			  Mot de passe (verification):<br>
+			  <input type="password" name="password2" required><br>
+			  <!-- check if the two passwords are the same-->
+			  <br>
+			  <?php
+			  if("password2" != "password1"){
+			  echo "The two passwords are not the same"
+			  }
+			  ?>
+			  <input type="submit" value="Valider">
+			  </fieldset>
+			</form>
+			</section>
+			<br>
+			<br>
 
-		<!-- connection form-->
-		<section>
-		 <form action="controleur_connexion.php" method="post">
-		 <!-- TODO:
-		 check if this is the correct php file
-		 !!!
-		 -->
-		 <fieldset>
-		  <legend><h2>Inscription:</h2></legend>
-		  Identifiant (nom utilisateur ou adresse mail):<br>
-		  <input type="text" name="identifier" required><br>
-		  Mot de passe:<br>
-		  <input type="password" name="password" required><br>
-		  <input type="submit" value="Valider">
-		  </fieldset>
-		</form> </p>
+			<!-- connection form-->
+			 <form action="pageDAccueil.php" method="post">
+			 <!-- TODO: 
+			 check if controleur_connexion.php is the correct php file
+			 !!!
+			 -->
+			 <fieldset>
+			  <legend><h2>Inscription:</h2></legend>
+			  Identifiant (nom utilisateur ou adresse mail):<br>
+			  <input type="text" name="identifier" required><br>
+			  Mot de passe:<br>
+			  <input type="password" name="password" required><br>
+			  <br>
+			  <input type="submit" value="Valider">
+			  </fieldset>
+			</form> </p>
 	</div>
 
-	<div class="w3-container w3-cell w3-mobile">
+	<div class="w3-container w3-cell w3-mobile" style="width:65%">
 	 <div class="w3-card-4">
-	  <img src="acu.jpg" alt="acu" style="width:50%">
+	  <img src="acu.jpg" alt="acu" style="width:100%">
 	   <div class="w3-container w3-center">
 		<p>
 		<h2>Parta'jeux</h2>
