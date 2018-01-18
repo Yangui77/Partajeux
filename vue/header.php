@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ANCIENNE VERSION -- FAUT IL GARDER QC DE CA?
 <html>
     <head> 
 
@@ -18,4 +19,44 @@
     <h5>Partajeux<h5>
         </ul>
  </head>
-<body>
+<body>-->
+
+
+<html>
+	<head>
+		<title>Partajeux</title>
+	</head>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<body>
+		<!-- Header with search bar-->
+		<div class="w3-display-container w3-teal" style="height:45px;">
+		<div class="w3-bar">		
+			<!-- welcome-->
+			<div class="w3-bar-item w3-mobile w3-display-left"<h5><?php echo 'Bonjour '. ucfirst($_SESSION['Identifiant']);?></h3>
+			</div>
+			<!-- search bar with icon-->
+			<div class="w3-bar-item w3-mobile w3-display-topmiddle">
+				<div id="form_recherche">
+					<form method="post" action="">
+						<input type="text" size="75" placeholder="Search.." name="search" id="search"/>
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<div id="resultat_recherche">
+						<ul>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- log out-->
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-display-right"><h5>Déconnexion</h5></a>
+		</div>
+		</div>
+	</body>
+	</html>
+
+
+
+
+	
