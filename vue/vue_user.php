@@ -20,21 +20,16 @@
 <body>
 	<!-- Page Content -->
 	<div class="w3-light-grey" style="margin-left:16%">	
-	
-	<!-- Main part -->
-	<div class="w3-container">
-	<h2>Test</h2>
-	<p>TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest</p>
-	</div>
-
-	
+		<div class="w3-container w3-center w3-xxxlarge">
+		<b>Bienvenue<br>au<br>Partajeux</b>
+		</div>
 	</div>
 	<!-- Sidebar -->
 	<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:16%">
 	  <h3 class="w3-bar-item">Menu</h3>
 	  <a href="#" class="w3-bar-item w3-button">Changer mes données</a>
-	  <a href="#" class="w3-bar-item w3-button">Mes jeux</a>
-	  <a href="#" class="w3-bar-item w3-button">Jeux voulus</a>
+	  <a href="vue/vue_mes_jeux.php" class="w3-bar-item w3-button">Mes jeux</a>
+	  <a href="vue/vue_jeux_voulu.php" class="w3-bar-item w3-button">Jeux voulus</a>
 	  <a href="#" class="w3-bar-item w3-button">Jeux échangés</a>
 	</div>
 

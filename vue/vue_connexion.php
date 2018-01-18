@@ -76,7 +76,7 @@
 			  <div id="bad_id" class ="error">
 				Votre Identifiant est déjà utilisé.
 			  </div>
-			  <input id="Form_inscription_submit" type="submit" value="INSCRIPTION" name="inscription" />
+			  <input id="Form_inscription_submit" type="submit" value="Inscription" name="inscription" />
 			  </fieldset>
 			</form>
 			</p>
