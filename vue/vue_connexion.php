@@ -45,7 +45,7 @@
 			</form>
 			<!-- error message if the identifiers are wrong-->
 			<div id="mauvais_log" class ="error">
-			 Vos identifiants ne sont pas bon 
+			 Vos identifiants ne sont pas bons.
 			</div>
 			</section>
 			<br>
@@ -67,14 +67,14 @@
 			  <input type="password" name="verif_pass" id="Form_inscription" required/><br>
 			  <!-- error message if the two passwords are not the same-->
 			  <div id="bad_mdp" class ="error">
-				Les deux mots de passes sont différents
+				Les deux mots de passe sont différents.
 			  </div>				
 			  <br>
 			  Identifiant : </br> <input type="text" name="Identifiant" id="Form_inscription" required/><br>
 			  <br>
 			  <!-- error message if identifier is already taken-->
 			  <div id="bad_id" class ="error">
-				Votre Identifiant est déjà utilisé
+				Votre Identifiant est déjà utilisé.
 			  </div>
 			  <input id="Form_inscription_submit" type="submit" value="INSCRIPTION" name="inscription" />
 			  </fieldset>

@@ -39,7 +39,7 @@
 			<div class="w3-bar-item w3-mobile w3-display-topmiddle">
 				<div id="form_recherche">
 					<form method="post" action="">
-						<input type="text" size="75" placeholder="Search.." name="search" id="search"/>
+						<input type="text" size="51" placeholder="Search.." name="search" id="search"/>
 						<button type="submit"><i class="fa fa-search"></i></button>
 					</form>
 					<div id="resultat_recherche">
@@ -50,12 +50,13 @@
 				</div>
 			</div>
 			<!-- log out-->
-			<a href="#" class="w3-bar-item w3-button w3-mobile w3-display-right"><h5>Déconnexion</h5></a>
+			<div id="deconnexion">
+				<a class="deconnexion w3-bar-item w3-button w3-mobile w3-display-right" href="vue/deconnexion.php">Déconnexion</a>
+			</div>
 		</div>
 		</div>
 	</body>
 	</html>
-
 
 
 
