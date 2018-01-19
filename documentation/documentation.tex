@@ -38,11 +38,30 @@
     %\vspace{0.5cm}
    	%\rule{\textwidth}{0.4pt}
 %}
+\title{Partajeux}
+\date{26 janvier 2018}
+%\author{DANG Hung Hoang,\\FUDITPHU Yan-Guillaume,\\KULZER Ulrike}
+\author{John Doe\\ Magic Department, Richard Miles University
+        \and Richard Row, \LaTeX\ Academy}
 
 \renewcommand*\contentsname{Summary}
 
 \begin{document}
 %\maketitle
+
+\begin{titlepage}
+	\centering
+	{\LARGE ESIEE Paris\par}
+	\vspace{1cm}
+	{\scshape\Large SI-4301B Architecture et développement d’applications Web en PHP\par}
+	\vfill
+	{\huge\bfseries Partajeux\par}
+	\vfill
+	{\large DANG Hung Hoang, FUDITPHU Yan-Guillaume, KULZER Ulrike\par}
+
+\end{titlepage}
+
+
 
 %%% begin costom title
 {\Large\noindent \emph{ESIEE Paris}}
@@ -65,29 +84,194 @@
 
 \setcounter{page}{1} % reset page counter to one for the first page, leave the title page out
 
-% ################### guide d'utilisateur #######################
 \newpage
 \section{Présentation du projet}
 \subsection{Introduction/Description}
-\subsection{Spécifications}
+\vspace{0.2cm}
+{\Large Partajeux\\}
+
+Est une plateforme de mise en relation qui permet aux utilisateurs d'échanger
+pour une durée de temps leur jeux vidéo en ligne. Ils déterminent grâce à
+l'application les jeux qu'ils veulent échanger, puis fixent un rendez vous (date, heure, lieu de l'échange, durée).//
+L'utilisateur doit pouvoir se connecter à l'application, s'identifier, ajouter ses jeux à échanger et ajouter des jeux voulu. L'utilisateur pourra rechercher les jeux qu'il veut et l'application affichera les utilisateurs qui peuvent potentiellement échanger (ils sont soit intéressés par un de nos jeux, soit ils ont la console pour un de nos jeux). L'utilisateur pourra ensuite proposer un échange et attendra la confirmation. Lorsque l'échange s'effectue les utilisateurs confirment l'échange et les jeux deviennent indisponible. Lorsque la durée de l'échange est terminé les utilisateurs doivent confirmer le retour des jeux pour qu'ils redeviennent disponible dans l'application.\\
+
+Sites d'inspiration:\\
+\begin{itemize}
+\item Steam : 
+\url{http://store.steampowered.com/}\\
+\item Romstation : 
+\url{http://www.romstation.fr/accueil}\\
+\item Smiile : 
+\url{https://www.smiile.com/}\\
+\item MyTroc : 
+\url{https://mytroc.fr/}\\
+\item GchangeTout : 
+\url{http://www.gchangetout.com/}\\
+\item Ebay : 
+\url{https://www.ebay.fr/}\\
+\item LeBonCoin : 
+\url{https://www.leboncoin.fr/}\\
+\end{itemize}
+
+\subsection{L'équipe}
+% experiences
+L'équipe de Partajeux se compose de trois membres :\\
+\begin{itemize}
+\item Hung Hoang DANG : expérimenté en développement web et SQL\\
+\item Yan-Guillaume FUDITPHU : expérimenté en développement web et SQL\\
+\item Ulrike KULZER : expérimentée en SQL\\
+\end{itemize}
+
+
+
+\newpage
 \section{Analyse fonctionnelle}
-\section{Modèle Conceptuel de données}
-% E-R-Diagramme plus BDD finale
+\begin{longtable}{|p{0.23\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|l|}
+\hline
+\textbf{Fonctionnalité} & \textbf{Tâche} & \textbf{Sous-tâche} & \textbf{Importance}\\
+\hline
+Page de connexion & Formulaire d'inscription & Nom d'utilisateur & *****\\
+ \hline
+ & & Adresse Mail & *****\\
+ \hline
+ & & Mot de passe & *****\\
+ \hline
+ & & Taper deux fois & **\\
+ \hline
+ & & & \\
+ \hline
+ & Formulaire de connexion & Nom d'utilisateur & *****\\
+ \hline
+ & & Mot de passe & *****\\
+ \hline
+ & & Adress mail idenfiant & * \\
+ \hline
+  & & & \\
+ \hline	
+ & Description de l'application & Texte & ****\\
+ \hline
+ & & Image & **\\
+ \hline
+  & & & \\
+ \hline
+  & Information (Mention légale) &  Texte & ***\\
+ \hline
+ & & & \\
+ \hline
+ & & & \\
+ \hline
+Page d'accueil & Vous êtes connecté en tant que & & *****\\
+ \hline
+& Mes jeux & & *****\\
+ \hline
+& Jeux voulu & & *****\\
+ \hline
+& Barre de recherche & & *****\\
+ \hline
+& Notification & & ***\\
+ \hline
+  & & & \\
+ \hline
+ & & & \\
+ \hline
+Page de profil & Changer mot de passe & & *****\\
+ \hline
+ & Changer adresse mail & & *****\\
+ \hline
+ & Changer/ajouter photo de profil & & *\\
+ \hline
+ & bloquer utilisateur & & *\\
+ \hline
+ & & & \\
+ \hline
+ & & & \\
+ \hline
+Page de recherche & afficher résultat & afficher le jeu (titre, console, année,...) & *****\\
+\hline
+ &  & afficher les users dont l'échange est possible & *****\\
+ \hline
+ & afficher les propositions de résultats en temps réel &  & **\\
+ \hline
+ & & & \\
+ \hline
+ & & & \\
+ \hline
+Page description jeu & Image &  & ****\\
+ \hline
+ & Titre &  & *****\\
+ \hline
+ & Console &  & *****\\
+ \hline
+ & Année &  & ***\\
+ \hline
+ & Description &  & ******\\
+ \hline
+ & Proposition d'échange &  & ******\\
+ \hline
+ & & & \\
+ \hline
+ & & & \\
+ \hline
+Formulaire d'échange & Lieu &  & *****\\
+\hline
+ & Date et heure &  & *****\\
+ \hline
+ & Durée de l'échange &  & *****\\
+ \hline
+ & Jeux échangés &  & *****\\
+ \hline
+ & Noms des utilisateurs &  & *****\\
+ \hline
+ & Bouton confirmation et envoi à l'autre utilisateur &  & *****\\
+ \hline
+ & Pouvoir modifier la proposition (exemple : heure) et la renvoyer &  & ****\\
+ \hline
+ & Champ de texte &  & *****\\
+  \hline
+\end{longtable}
+
+
+\section{Modèle conceptuel de données}
+\vspace{0.5cm}
+% E-R-Diagramme
+\begin{minipage}[c]{\textwidth}
+\centering
+\includegraphics[width=\textwidth, trim=5mm 80mm 80mm 5mm, clip]{./doc/E-R-Diagrammme.pdf}
+    %TRIM = LINKS UNTEN RECHTS OBEN
+\captionof{figure}{Modèle entité-association au début du projet}
+\label{img:er}
+\vspace{1cm}
+
+% Modèle conceptuel de données FINALE
+\includegraphics[width=\textwidth, trim=5mm 80mm 80mm 5mm, clip]{./doc/E-R-Diagrammme.pdf}
+    %TRIM = LINKS UNTEN RECHTS OBEN
+\captionof{figure}{Modèle conceptuel de données à la fin du projet}
+\label{img:mcd}
+\end{minipage}
+
+\newpage
 \section{Documentation}
 \subsection{Documentation technique}
+\subsubsection{Organisation}
+Pour mieux nous organiser et échanger le code du programme nous avons décidé d'utiliser git. Git est un système de contrôle de versions distribuées gratuit qui était créé pour gérer vite et efficacement les projets de toutes les tailles. Pour notre projet nous avons utilisé un repository public.
+Vous trouveriez plus des informations sous \url{https://github.com/} et \url{https://git-scm.com/}.
+\subsubsection{Pré-requis et instruction d'installation}
+-- apache, javascript, php, html, css, mySQL, jQuery
+
+\subsubsection{Choix d'architecture et d'implémentation particuliers}
+-- modèle MVC
+
 \subsection{Documentation utilisateurs}
 % captures d'écran
+Cette partie devra contenir un bref descriptif de l'application pour l'utilisateur
+final : description des menus et principales fonctionnalités. Vous pourrez y
+ajouter éventuellement des copies d'écran
 
-\\
+
+
+
 \begin{minipage}[t]{0.5\textwidth}
-    \begin{itemize}
-    \item \textit{le chiffre de César :}\\
 
-    \paragraph{}
-    \item \textit{le chiffre de Vigenère :}\\
-    
-
-    \end{itemize}
  %   \begin{center}
   %  \raggedleft
 % 	\includegraphics[height=3.4cm]{}
@@ -107,42 +291,16 @@
     %\label{tabVig}
   %\end{minipage}
 
-\begin{minipage}[t]{0.5\textwidth}
-    \begin{itemize}
-    \item \textit{celui de la machine Enigma :}\\
-    
-    \end{itemize}
-  \end{minipage}
 
-\newpage
-\subsection{Fonctionnement du programme}
 
-\subsubsection{Accueil et choix de la langue}
-Pour exécuter notre programme, il est nécessaire de l'ouvrir avec le logiciel Pycharm, d'aller dans le fichier "main\_module" et d'appuyer sur "run" - "run" - "run main\_module".
-Les instructions du programme seront affichées dans la console qui s'ouvre en bas de l'interface comme montrés ci dessous :
-\vspace{0.5cm}
-\\
+
+
 %{\fbox{\parbox{\textwidth}{\raggedright
 %\includegraphics{}}}
 %	\captionof{figure}{Écran d'accueil}
 %	\label{SP}
 %}
-\vspace{0.5cm}
-Vous venez d’entrer dans le programme Cryptographie, vous devez entrer la lettre ' f ' pour avoir les instructions en français et ' e ' pour les avoir en anglais.
-Si la lettre entrée est ' e ', les prochaines instructions seront donc en anglais. \\
-\\
-Note: Vous retrouverez les mêmes interfaces en français.\\
-\\
-Une nouvelle fenêtre va ensuite apparaître :
-\vspace{0.5cm}
-\\
 
-
-
-\newpage
-\subsection{Structure du programme}
-% diagrammme
-\vspace{1cm}
 %\begin{minipage}[c]{\textwidth}
 %\centering
 %    \includegraphics[width=\textwidth, trim=1mm 50mm 1mm 1mm, clip]{}
@@ -150,23 +308,6 @@ Une nouvelle fenêtre va ensuite apparaître :
 %    \captionof{figure}{Structure du programme en modules}
 %    \label{img:structure}
 %\end{minipage}
-
-
-
-\section{Annexe: Code du programme}
-{\large
-\textit{L'ordre des modules:}
-\begin{enumerate}
-\item main\_module
-\item screen\_module
-\item screen\_constants
-\item text\_module
-\item tests
-\end{enumerate}
-}
-
-
-
 
 
 %\begin{floatingfigure}[l]{5.3cm}
@@ -177,8 +318,7 @@ Une nouvelle fenêtre va ensuite apparaître :
 
 
 %\par
-%\vspace{2em}
-%\vspace{1em}
+%\vspace{0.5cm}
 
 % "`Standard Definition Television"', HDTV für "`High Definition Television'".
 
