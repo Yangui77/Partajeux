@@ -2,13 +2,13 @@
 
 session_start();
 
-//require('vue/header.php');
+require('vue/header.php');
 include('controleur/controleur_connexion.php');
 
 // si l'utilisateur veut s'inscrire il clique sur le bouton inscription et ça lui afficher la vue inscription
-/*if(isset($_POST['inscription'])){
+if(isset($_POST['inscription'])){
 	require('vue/vue_inscription.php');
-}*/
+}
 //si l'utilisateur n'est pas connecté on lui montre la vue de la connexion.
 if (!isset($_SESSION['Identifiant']))
 {	 
@@ -18,7 +18,7 @@ if (!isset($_SESSION['Identifiant']))
 else
 {
 //on lui montre la barre de recherche
-require('vue/header.php');
+require('vue/barre_de_recherche.php');
 //gère les réponses de la barre de recherche
 include('controleur/controleur_barre_de_recherche.php');
 //montre les informations du users

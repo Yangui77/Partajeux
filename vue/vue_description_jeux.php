@@ -1,12 +1,3 @@
-<!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:16%">
-  <h3 class="w3-bar-item">Menu</h3>
-  <a href="#" class="w3-bar-item w3-button">Changer mes données</a>
-  <a href="vue/vue_mes_jeux.php" class="w3-bar-item w3-button">Mes jeux</a>
-  <a href="vue/vue_jeux_voulu.php" class="w3-bar-item w3-button">Jeux voulus</a>
-  <a href="#" class="w3-bar-item w3-button">Jeux échangés</a>
-</div>
-
 <?php
 $Jeux = info_jeux($_POST['jeux']);
 foreach ($Jeux as $Jeu ): 
