@@ -1,5 +1,5 @@
 <?php
-include_once('libs.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 
 //retourne un array avec les jeux de l'utilisateur avec en parametre son id
 function jeux($id, $table){

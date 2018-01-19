@@ -1,5 +1,5 @@
 <?php 
-include_once('libs.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 
 //ajouter un membre à la base de donnée
 function ajout_membre($NomUtilisateur,$Email,$Mdp,$Identifiant)
