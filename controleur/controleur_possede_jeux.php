@@ -3,16 +3,16 @@
 include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/modele_possede_jeux.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/modele_description_jeux.php');
 
+//pour ne pas avoir possede_jeux vide
 
-if(isset($_SESSION['possede_jeux'])){
+	//on charge toute les consoles du jeux demandé
+
+
 $allconsole = get_console($_SESSION['possede_jeux']);
+if (isset($allconsole)){
 foreach ($allconsole as $console ) {
-
-if(isset($_POST[$console['idConsole']]))
-{
+//pour chaque console
 $idConsole = $_POST[$console['idConsole']];
-}
-
 if(isset($idConsole)){
 $verif = possede_jeux($_SESSION['Id'],$_SESSION['possede_jeux'],$idConsole,'PossedeJeux');
 
@@ -24,6 +24,7 @@ echo "vous avez deja ce jeux";
 if(!$verif && isset($_POST['ajouter_jeux'])){
 	ajout_jeux($_SESSION['Id'],$_SESSION['possede_jeux'],$idConsole,'PossedeJeux');
 	$possede = 1;
+	echo "jeux ajouté";
 }
 if(!$verif && isset($_POST['ajouter_jeux_voulu'])){
 
@@ -31,12 +32,9 @@ if(!$verif && isset($_POST['ajouter_jeux_voulu'])){
 	echo "jeux voulu ajouté";
 	$voulu = 1;
 }
-if (isset($possede)AND isset($voulu)){
-if($possede == '1'||$voulu == '1' ){
-	echo "jeux ajouté";
-}}
+}
 
+}
+}
 
-}}}
-
-?>
+ ?>

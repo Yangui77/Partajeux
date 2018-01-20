@@ -6,4 +6,5 @@ if(isset($_SESSION['Identifiant'])){
 	include($_SERVER['DOCUMENT_ROOT'].'/Partajeux/vue/vue_user.php');
 	
 }
+
 ?>
