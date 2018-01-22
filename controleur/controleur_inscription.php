@@ -31,6 +31,7 @@ if(isset($_POST['inscription']))
         {  // Enregistrement du membre dans la bdd
             ajout_membre($_POST['NomUtilisateur'],$_POST['Email'],$_POST['Mdp'],$_POST['Identifiant']);
             $_SESSION['inscris'] = 'inscris';
+            echo "Félicitation vous êtes inscris";
              
         }      
 

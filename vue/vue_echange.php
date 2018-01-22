@@ -1,7 +1,6 @@
 <?php 
 include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/modele_echange.php');
 
-
 $joueur_interresse = joueur_possede_jeux_voulu($_SESSION['Id']);
 
 echo "<div class="."MesJeux". ">";
@@ -29,12 +28,11 @@ echo "et veut : </br>";
 	 	foreach ($tab2 as $j3) {
 	 	
 	 	 echo get_NomJeux($j3['idJeux']) .' sur '.get_NomConsole($j3['idConsole']).'</br>';
-	 }}
+	 }} ?>
+	<a class="lien" href=index.php?echange=<?php echo afficher_nom_joueur($j['idUtilisateur']) ?> method = "get"> Proposer un échange</a> 
+	<?php
+	echo "</div>";
 	
 	
 }
-echo "</div>";
-
-  
-  	
-// ?> 
+?>

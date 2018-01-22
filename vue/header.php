@@ -18,8 +18,8 @@
          
         <ul id="navigation">
   <li><a href="index.php?page=perso" method="GET" title="aller à la section 1">Mon Profil</a></li>
-  <li><a href="./echange.php" title="Page Echange">Echange</a></li>
-  <li><a href="index.php?page=accueil" title="aller à la section 2">Partajeux</a></li>
+  <li><a href="index.php?page=echange" method="GET"  title="Page Echange">Echange</a></li>
+  <li><a href="index.php?page=accueil" method="GET" title="Page d'accueil">Partajeux</a></li>
     <h5>Partajeux<h5>
         </ul>
  </head>
