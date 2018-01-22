@@ -17,5 +17,6 @@ if($transaction){
 			echo '</br> contre </br>'. ucfirst(afficher_nom_joueur($j2)). ' ' ;
 			echo get_NomJeux($idJeux2) . '  ';
 			echo 'sur '.get_NomConsole($idConsole2) . '  ';
+
 		}
 ?>
