@@ -1,7 +1,6 @@
 <?php $transaction = isset($_POST['echange_jeux_moi']) || isset($_POST['echange_jeux_autre'] );
 if($transaction){
 
-
 			$jeu1 = ( explode( ',', $_POST['echange_jeux_moi']));
 			$jeu2 = ( explode( ',', $_POST['echange_jeux_autre']));
 
@@ -17,6 +16,5 @@ if($transaction){
 			echo '</br> contre </br>'. ucfirst(afficher_nom_joueur($j2)). ' ' ;
 			echo get_NomJeux($idJeux2) . '  ';
 			echo 'sur '.get_NomConsole($idConsole2) . '  ';
-
 		}
 ?>
