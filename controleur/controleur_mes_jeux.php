@@ -17,10 +17,12 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/modele_user.php');
 		$perso = TRUE;
 
 	}
-
+	//si on demande la page perso
 	if(isset($perso)){
 	if($perso){
+		//on regarde si le joueur est l'utilisateur de la session
 		$estJoueur = $idJoueur == $_SESSION['Id'];
+		//afficher sa vue mes jeux les pages recoivent la variable $estjoueur pour savoir qui est le joueur concerné
 		include($_SERVER['DOCUMENT_ROOT'].'/Partajeux/vue/vue_mes_jeux.php');
 		//afficher sa vue mes jeux voulu
 		include($_SERVER['DOCUMENT_ROOT'].'/Partajeux/vue/vue_jeux_voulu.php');
