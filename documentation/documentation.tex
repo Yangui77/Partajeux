@@ -253,42 +253,117 @@ Formulaire d'échange & Lieu &  & *****\\
 \section{Documentation}
 \subsection{Documentation technique}
 \subsubsection{Organisation}
+\begin{floatingfigure}[r]{0.25\textwidth}
+\includegraphics[width=0.15\textwidth]{./doc/git_logo.png}
+%\caption{Le logo de git}
+\label{git}
+\end{floatingfigure}
+
 Pour mieux nous organiser et échanger le code du programme nous avons décidé d'utiliser git. Git est un système de contrôle de versions distribuées gratuit qui était créé pour gérer vite et efficacement les projets de toutes les tailles. Pour notre projet nous avons utilisé un repository public.
-Vous trouveriez plus des informations sous \url{https://github.com/} et \url{https://git-scm.com/}.
+Vous trouveriez plus des informations sous \url{https://github.com/} et \url{https://git-scm.com/}.\\
+
 \subsubsection{Pré-requis et instruction d'installation}
+Les pré-requis sont:  serveur Apache, Mysql 5, PHP 7.0\\
 -- apache, javascript, php, html, css, mySQL, jQuery
 
 \subsubsection{Choix d'architecture et d'implémentation particuliers}
--- modèle MVC
+Le site est codé avec une architecture Model-View-Controller (MVC) qui nous permet de séparer vue, modèle et les commandes de l'utilisateur.\\
+Les contrôleurs reçoivent les requêtes de l'utilisateur et utilisent les fonctions du modèle afin de récupérer les informations de la base de données, le contrôleur affiche ensuite la vue avec les différentes informations. Dans ce projet les vues utilisent aussi le modèle pour accéder à la base de donnée.\\
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=\textwidth]{./doc/mvc.png}
+	\caption{Le modèle MVC}
+	\label{mvc}
+\end{figure}
 
+De plus nous avons utilisé la technologie AJAX pour la barre de recherche.\\
+Nous avons décidé de ne pas utiliser de framework car nos connaissances/compétences étaient insuffisants en considérant le temps qu'il restait pour le projet.\\
+
+\newpage
 \subsection{Documentation utilisateurs}
-% captures d'écran
-\textbf{Cette partie devra contenir un bref descriptif de l'application pour l'utilisateur final : description des menus et principales fonctionnalités. Vous pourrez y ajouter éventuellement des copies d'écran}\\
-\paragraph{}
-Lorsque l'utilisateur ouvre la page de Partajeux il se retrouve sur la page d'accueil suivante (voir figure \ref{}). Ici il peut trouver plus d'informations sur Partajeux en cliquant sur le bouton "Partajeux" dans la barre de navigation ou se connecter directement avec son identifiant et mot de passe. S'il n'est pas encore inscrit il suffit de cliquer sur "Inscription" ce qui va afficher le formulaire d'inscription (voir figure \ref{}). Pour s'inscrire l'utilisateur doit mettre son nom et son adresse mail. Ensuite il choisit un identifiant qui est utilisé pour se connecter et un mot de passe qu'il doit entrer deux fois pour éviter qu'il fait une faute et qu'il ne peut plus se connecter après. Le système va chercher dans la base de données si l'identifiant est déjà pris et dans ce cas prévenir l'utilisateur.
-Une fois inscrit et connecté, l'utilisateur peut choisir dans la barre de navigation ce qu'il veut faire:
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=\textwidth]{./doc/01_startscreen.png}
+	\caption{Page d'accueil}
+	\label{pdacc}
+\end{figure}
+
+Lorsque l'utilisateur ouvre la page de Partajeux il se retrouve sur la page d'accueil suivante (voir figure \ref{pdacc}). Ici il peut trouver plus d'informations sur Partajeux en cliquant sur le bouton "Partajeux" dans la barre de navigation ou se connecter directement avec son identifiant et mot de passe. S'il n'est pas encore inscrit il suffit de cliquer sur "Inscription" pour afficher le formulaire d'inscription:\\
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=\textwidth]{./doc/02_inscription.png}
+	\caption{Formulaire d'inscription}
+	\label{insc}
+\end{figure}
+
+Pour s'inscrire l'utilisateur doit mettre son nom et son adresse mail. Ensuite il choisit un identifiant qui est utilisé pour se connecter et un mot de passe qu'il doit entrer deux fois pour éviter qu'il fait une faute et qu'il ne peut plus se connecter après. Le système va chercher dans la base de données si l'identifiant est déjà pris et dans ce cas prévenir l'utilisateur.\\
+Une fois inscrit et connecté, l'utilisateur peut choisir dans la barre de navigation ce qu'il veut faire:\\
 \begin{itemize}
-\item rechercher des jeux avec la barre de recherche qui propose des jeux correspondants à sa saisie (voir figure \ref{•})
-\item gérer les jeux qu'il possède et ses jeux voulus en cliquant sur "Mon profil" (voir figure \ref{•})
-\item gérer ses échanges
-\item se déconnecter.
+\item rechercher des jeux avec la barre de recherche qui propose des jeux correspondants à sa saisie,
+\item gérer les jeux qu'il possède et ses jeux voulus en cliquant sur "Mon profil" (voir figure \ref{profile}),
+\item gérer ses échanges (voir figure \ref{exch}) ou
+\item se déconnecter.\\
 \end{itemize}
 
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=\textwidth]{./doc/05_description_jeu.png}
+	\caption{Description d'un jeu}
+	\label{jeu}
+\end{figure}
+
+\newpage
+Lorsque l'utilisateur clique sur un jeu proposé dans la barre de recherche la description du jeu va être affichée. Sur cette page il trouveras toutes les informations importantes sur le jeu: le titre, l'année de la sortie, les consoles pour lesquelles le jeu est sorti, une image et une brève description de l'histoire. En bas il est possible d'ajouter le jeu aux jeux possédés ou de l'ajouter aux jeux voulus. Pour réaliser une des deux actions l'utilisateur doit choisir une ou plusieurs consoles du jeux et cliquer sur le bouton correspondant à la liste souhaitée.
+\vspace{1cm}
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{./doc/03_profile.png}
+	\caption{Page de profil}
+	\label{profile}
+\end{figure}
+
+\newpage
+Sur la page personnelle de l'utilisateur il peut voir les jeux qu'il propose pour un échange et à gauche les jeux qu'il aimerait emprunter. L'utilisateur peut également retirer des jeux d'une liste en appuyant sur le bouton approprié.\\
+
+\vspace{1cm}
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=\textwidth]{./doc/04_echanges.png}
+	\caption{Échanges possibles}
+	\label{exch}
+\end{figure}
+
+Si l'utilisateur veut voir ses échanges possibles il clique sur "Échange" et une liste des échanges possibles s'affichera. Chaque proposition suit l'organisation suivante:\\
+
+\begin{quote}
+{[utilisateur]} a :\\
+{[jeu 1]} sur {[console 1]}\\
+{[jeu 2]} sur {[console 2]}\\
+...\\
+et veut :\\
+{[jeu 1]} sur {[console 1]}\\
+{[jeu 2]} sur {[console 2]}\\
+...\\
+Proposer un échange\\
+\end{quote}
+
+L'utilisateur peut ensuite cliquer sur le nom de l'utilisateur proposé pour regarder tous les jeux qu'il propose ou lancer l'échange en cliquant sur "Proposer un échange". Par la suite un dialogue va s'afficher dans lequel l'utilisateur peut choisir les jeux proposés pour un échange. Lorsque l'utilisateur a choisi une demande d'échange va être envoyé à l'autre utilisateur qui doit le confirmer.
+
+\newpage
+\subsection{Fonctionnalités non réalisées}
+\begin{itemize}
+\item Proposition d'échange par console :\\
+L'application actuellement ne propose aux utilisateurs que les échanges qui sont possibles (basé sur ce qu'ils veulent et possèdent).
+\item Confirmation et création d'un échange : L'application n'a pas pu être finalisée faute de temps, en ce moment l'utilisateur ne recevra pas de proposition d'échange.
+\item Responsivité du site : Par faute de temps aussi le site n'est pas responsive et n'est donc pas adapté à tous les appareils.
+\item Interface BackEnd : Les jeux de la plateforme sont entrés à la main directement dans phpmyadmin. Il faudrait créer une interface afin de permettre aux administrateur de gérer les jeux contenu dans le site.
+\end{itemize}
+
+ 
 
 
 
 
-
-\begin{minipage}[t]{0.5\textwidth}
-
- %   \begin{center}
-  %  \raggedleft
-% 	\includegraphics[height=3.4cm]{}
- 	%\caption{exemple du cryptage de Vigenère}
-% 	\label{exVig}
-%    \end{center} 
-	
-  \end{minipage} 
 %  \begin{minipage}[t]{0.4\linewidth}
  %   \raggedleft
   %  \strut\vspace*{-\baselineskip}\newline\includegraphics[width=0.9\linewidth]{}
@@ -317,13 +392,6 @@ Une fois inscrit et connecté, l'utilisateur peut choisir dans la barre de navig
 %    \captionof{figure}{Structure du programme en modules}
 %    \label{img:structure}
 %\end{minipage}
-
-
-%\begin{floatingfigure}[l]{5.3cm}
-%	\includegraphics[width=0.25\textwidth]{./Bilder/2venn.png}
-%	\caption{Prinzip der additiven Farbmischung}
-%	\label{venn}
-%\end{floatingfigure}
 
 
 %\par
