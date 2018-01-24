@@ -1,5 +1,5 @@
 <?php 
-include_once('libs.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 
 //ajouter un membre à la base de donnée
 function ajout_membre($NomUtilisateur,$Email,$Mdp,$Identifiant)
@@ -26,7 +26,7 @@ $reponse = $bdd->query('SELECT Identifiant FROM Utilisateur ');
 //on compare tous les peudos avec le parametre $Identifiant
 while ($donnees = $reponse->fetch())
 {
-   if ($donnees[Identifiant] == $Identifiant)
+   if ($donnees['Identifiant'] == $Identifiant)
    {
     //return true si l'identifiant est déjà utilisé
     return true;  

@@ -1,6 +1,5 @@
 <?php 
-include_once('libs.php');
-
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 //fonction pour se connecter 
 function connexion($Identifiant,$Mdp)
 {

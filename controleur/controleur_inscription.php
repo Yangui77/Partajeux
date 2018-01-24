@@ -1,6 +1,6 @@
 <?php
 
-include_once('modele/modele_inscription.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/modele_inscription.php');
 // Chargement des fichiers modèles fonctions enregistrement_membre($pseudo, $pass_hash, $email) et check_bdd($pseudo)
 if(isset($_POST['inscription']))
 {
@@ -9,7 +9,7 @@ if(isset($_POST['inscription']))
     $_POST['Email'] = htmlspecialchars($_POST['Email']);
     $_POST['Mdp'] = htmlspecialchars($_POST['Mdp']);
     $_POST['Identifiant'] = strtolower(htmlspecialchars($_POST['Identifiant']));
-     
+     //vérifier si le pseudo est dans la base de données
     $Test_pseudo = comparer_pseudo($_POST['Identifiant']);
     
     // Verification de la validité de l'inscription
@@ -31,8 +31,10 @@ if(isset($_POST['inscription']))
         {  // Enregistrement du membre dans la bdd
             ajout_membre($_POST['NomUtilisateur'],$_POST['Email'],$_POST['Mdp'],$_POST['Identifiant']);
             $_SESSION['inscris'] = 'inscris';
+            echo "Félicitation vous êtes inscris";
              
         }      
+
 
 }
  

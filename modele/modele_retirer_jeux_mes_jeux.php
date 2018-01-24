@@ -1,5 +1,5 @@
 <?php
-include_once('libs.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 
 //retire le jeux de ses jeux 
 function retirer_jeux_mes_jeux($idUtilisateur,$idJeux,$table){

@@ -1,5 +1,5 @@
 <?php 
-include_once('libs.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 //fonction qui ajoute le jeux en fonction de l'id de l'utilisateur et de l'id du Jeux, $table pour savoir si le jeux est voulu ou possédé
 function ajout_jeux($idUtilisateur,$idJeux,$idConsole,$table)
 {   //se connecter à la base de donnée
@@ -40,7 +40,7 @@ if($table == 'PossedeJeux'){
 $reponse->execute(array('idUtilisateur' => $idUtilisateur));
 //on compare tous les jeux avec le parametre $Identifiant
 while ($donnees = $reponse->fetch()){
-   		if ($donnees[idJeux] == $idJeux && $donnees[idConsole] == $idConsole )
+   		if ($donnees['idJeux'] == $idJeux && $donnees['idConsole'] == $idConsole)
    		{  
    	    return true;
       

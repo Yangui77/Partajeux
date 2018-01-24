@@ -11,5 +11,5 @@
          Vos identifiants ne sont pas bon 
         </div>
 	   <form action="index.php" method="post" class="inscription">
-        <input class="envoyer" type="submit" value="Inscription" name="inscription"/>
+        <input class="envoyer" type="submit" value="Inscription" name="Fomulaire_inscription"/>
     </form>

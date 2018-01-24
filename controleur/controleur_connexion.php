@@ -1,6 +1,6 @@
 <?php 
 //on ajoute le modele pour utiliser les fonctions
-include_once('modele/modele_connexion.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/modele_connexion.php');
 
 // si le formulaire de connexion est envoyé
 if(isset($_POST['connexion']))
@@ -15,6 +15,7 @@ if(isset($_POST['connexion']))
         if ($valid_connexion){
         $_SESSION['Identifiant'] = $_POST['Identifiant'];
         $_SESSION['Id'] = get_id($_SESSION['Identifiant']);
+    
         }
         //si ils sont mauvais on active le message d'erreur sur la vue
         else ?>  <script> afficher("mauvais_log"); </script>
