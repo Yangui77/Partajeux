@@ -1,10 +1,26 @@
-<H1 class="titre-centré">Votre page perso</H1>
+<H1 class="titre-centré">
+	<?php 
+	$pseudoJoueur = ucfirst(afficher_nom_joueur($idJoueur));
+	if($estJoueur){
+			echo "Votre page perso";
+	}
+	else 
+		echo "La page perso de ". $pseudoJoueur ?>
+	</H1>
 </br>
 <div class="MesJeux">
-	<h1 class="titre-centré">VOS JEUX</h1>
+	<h1 class="titre-centré">
+	<?php 
+	if($estJoueur){
+			echo "VOS JEUX";
+	}
+	else 
+		echo "Les jeux de ". $pseudoJoueur?>
+	</h1>
 <!-- On stock dans $Jeux toutes les infos des jeux possédés par l'utilisateur -->
 <?php
-$Jeux = jeux($_SESSION['Id'],'PossedeJeux');
+
+$Jeux = jeux($idJoueur,'PossedeJeux');
 //on les afficher sur la page
 foreach ($Jeux as $Jeu ): 
 ?>
@@ -15,7 +31,7 @@ foreach ($Jeux as $Jeu ):
  </form>
 <h4>Année : <?php echo $Jeu['Année'] ;?> </h4>
 <h4>Console : <?php 
-$console_possede = get_console_jeux($_SESSION['Id'],$Jeu['idJeux'],'PossedeJeux');
+$console_possede = get_console_jeux($idJoueur,$Jeu['idJeux'],'PossedeJeux');
 foreach($console_possede as $Console){
 	echo $Console['NomConsole'] . " /  ";
 }
@@ -26,10 +42,13 @@ foreach($console_possede as $Console){
 <?php echo $Jeu['Description'];?>
 	
 </div>
+<?php 
+if($estJoueur){?>
 <form action="index.php" method="post" class="form_mes_jeux">
 <input id="idJeux_mes_jeux" type="text" value="<?php get_id_jeux($Jeu['NomJeux']); ?>" name="idJeux_mes_jeux" />
  <input id="reponse_jeux" type="submit" value="J'ai menti je n'ai pas ce jeux" name="retirer_de_mes_jeux" />
  </form>
+ <?php } ?>
 </div>
 
 

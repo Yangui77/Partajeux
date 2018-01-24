@@ -1,8 +1,13 @@
 
 <div class="MesJeux">
-	<h1 class="titre-centré">VOS JEUX VOULU</h1>
+	<h1 class="titre-centré">
+		<?if($estJoueur){
+			echo "Vos jeux voulu";
+	}
+	else 
+		echo "Les jeux voulu de ". $pseudoJoueur ?></h1>
 <?php
-$Jeux = jeux($_SESSION['Id'],'JeuxVoulu');
+$Jeux = jeux($idJoueur,'JeuxVoulu');
 
 foreach ($Jeux as $Jeu ): 
 ?>
@@ -23,11 +28,11 @@ foreach($console_possede as $Console){
 <h4>Description : </h4><div class="Description">
 <?php echo $Jeu['Description'];?>
 	
-</div>
+</div><?php if($estJoueur){?>
 <form action="index.php" method="post" class="form_mes_jeux">
 <input id="idJeux_mes_jeux" type="text" value="<?php get_id_jeux($Jeu['NomJeux']); ?>" name="idJeux_mes_jeux" />
  <input id="reponse_jeux" type="submit" value="Je ne veux plus ce jeux" name="retirer_de_mes_jeux_voulu" />
- </form>
+ </form> <?php } ?>
 </div>
 
 

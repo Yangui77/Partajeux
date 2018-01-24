@@ -39,7 +39,33 @@ function get_id_jeux($NomJeux){
 
 }
 
+function get_NomJeux($idJeux){
 
+	$bdd = db_connect();
+	$reponse = $bdd->prepare('SELECT NomJeux FROM Jeux WHERE idJeux = :idJeux');
+    $reponse->execute(array('idJeux' => $idJeux));
+
+	$donnees = $reponse->fetch();
+	return $donnees['NomJeux'];
+
+}
+function get_NomConsole($idConsole){
+$bdd = db_connect();
+	$reponse = $bdd->prepare('SELECT NomConsole FROM Console WHERE idConsole = :idConsole');
+    $reponse->execute(array('idConsole' => $idConsole));
+
+	$donnees = $reponse->fetch();
+	return $donnees['NomConsole'];
+
+}
+function afficher_nom_joueur($idUtilisateur){
+
+	$bdd = db_connect();
+	  $req = $bdd->prepare('SELECT Identifiant FROM Utilisateur WHERE idUtilisateur = :idUtilisateur');
+	  $req->execute(array('idUtilisateur' => $idUtilisateur));
+	  $reponse = $req->fetch();
+	  return $reponse['Identifiant'];
+}
 
 
 ?>
