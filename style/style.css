@@ -293,3 +293,10 @@ border: none;
 #lien_page_jeux:hover{
     text-decoration: underline;
 }
+
+.footer {
+    background-color: #000000;
+	color: white;
+    text-align: center;
+    padding: 10px;
+}
