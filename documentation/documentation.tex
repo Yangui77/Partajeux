@@ -91,7 +91,7 @@
 {\Large Partajeux\\}
 
 Est une plateforme de mise en relation qui permet aux utilisateurs d'échanger
-pour une durée de temps leur jeux vidéo en ligne. Ils déterminent grâce à
+pour une durée de temps leurs jeux vidéo en ligne. Ils déterminent grâce à
 l'application les jeux qu'ils veulent échanger, puis fixent un rendez vous (date, heure, lieu de l'échange, durée).//
 L'utilisateur doit pouvoir se connecter à l'application, s'identifier, ajouter ses jeux à échanger et ajouter des jeux voulu. L'utilisateur pourra rechercher les jeux qu'il veut et l'application affichera les utilisateurs qui peuvent potentiellement échanger (ils sont soit intéressés par un de nos jeux, soit ils ont la console pour un de nos jeux). L'utilisateur pourra ensuite proposer un échange et attendra la confirmation. Lorsque l'échange s'effectue les utilisateurs confirment l'échange et les jeux deviennent indisponible. Lorsque la durée de l'échange est terminé les utilisateurs doivent confirmer le retour des jeux pour qu'ils redeviennent disponible dans l'application.\\
 
@@ -188,7 +188,7 @@ Page de profil & Changer mot de passe & & *****\\
  \hline
 Page de recherche & afficher résultat & afficher le jeu (titre, console, année,...) & *****\\
 \hline
- &  & afficher les users dont l'échange est possible & *****\\
+ &  & afficher les utilisateurs dont l'échange est possible & *****\\
  \hline
  & afficher les propositions de résultats en temps réel &  & **\\
  \hline
@@ -372,13 +372,17 @@ L'utilisateur peut ensuite cliquer sur le nom de l'utilisateur proposé pour reg
 \begin{itemize}
 \item Proposition d'échange par console :\\
 L'application actuellement ne propose aux utilisateurs que les échanges qui sont possibles (basé sur ce qu'ils veulent et possèdent).
-\item Confirmation et création d'un échange : L'application n'a pas pu être finalisée faute de temps, en ce moment l'utilisateur ne recevra pas de proposition d'échange.
+\item Confirmation et création d'un échange : L'application n'a pas pu être finalisée faute de temps, en ce moment l'utilisateur ne recevra pas de proposition d'échange. En outre le formulaire d'échange n'est pas encore fini, il manque encore les paramètres de lieu, date et heure, durée de l'échange et un champ de texte. Comme pour le moment les utilisateurs ne reçoivent pas encore des propositions d'échange, il n'est pas possible de modifier et renvoyer une proposition.
 \item Responsivité du site : Par faute de temps aussi le site n'est pas responsive et n'est donc pas adapté à tous les appareils.
 \item Interface BackEnd : Les jeux de la plateforme sont entrés à la main directement dans phpmyadmin. Il faudrait créer une interface afin de permettre aux administrateur de gérer les jeux contenu dans le site.
+ \item Connexion: L'utilisateur peut se connecter avec son identifiant indiqué à l'inscription au lieu de son adresse mail.
+ \item Page de connexion: Nous n'avons pas eu le temps pour créer un logo ou une image représentant Partajeux.
+ \item Page d'accueil: Lorsque l'utilisateur est connecté la fonction "Notifications" n'est pas disponible parce que la partie d'échange n'a pas pu être réalisée complètement.
+ \item Page de profil: Dû au manque de temps nous n'avons pas pu inclure la fonctionnalité de changement du mot de passe et de l'adresse mail, ainsi que la possibilité de bloquer un utilisateur. D'ailleurs nous n'avons pas réalisé l'image de l'utilisateur car ce n'était pas prioritaire.
 \end{itemize}
 
- 
-
+\section{Conclusion du projet}
+Ce projet a été l'occasion pour nous de découvrir/approfondir nos connaissances en php et en web généralement. Notamment la structure MVC qui s'est avérée très utile pour le partage et l'organisation du projet. Nous sommes très satisfait du rendu de ce projet bien qu'il ne soit pas complètement aboutit. La base est là et les dernières fonctionnalités non effectués ne sont pas dû à un manque de connaissance technique mais plutôt à un manque de temps (application trop ambitieuse par rapport à notre niveau). Il reste aussi des erreurs de sécurité et quelques mauvaises pratiques qui auraient pu être corrigé (navigation par get() et post()). La gestion du projet n'a pas été parfaite, le travail n'a pas été répartie équitablement entre les membres du groupe (plus ou moins motivé par le projet), le travail n'était pas aussi constant qu'on aurait voulu. Beaucoup de temps a été perdu sur le débogage, souvent pour des petites erreurs (points virgules et variables mal recopiées).
 
 
 
@@ -403,36 +407,12 @@ L'application actuellement ne propose aux utilisateurs que les échanges qui son
 %	\label{SP}
 %}
 
-%\begin{minipage}[c]{\textwidth}
-%\centering
-%    \includegraphics[width=\textwidth, trim=1mm 50mm 1mm 1mm, clip]{}
-    %TRIM = LINKS UNTEN RECHTS OBEN
-%    \captionof{figure}{Structure du programme en modules}
-%    \label{img:structure}
-%\end{minipage}
-
 
 %\par
 %\vspace{0.5cm}
 
 % "`Standard Definition Television"', HDTV für "`High Definition Television'".
 
-
-%\begin{itemize}
-%\item \blindtext
-%\item \blindtext
-%\end{itemize}
-%\begin{enumerate}
-%\item \blindtext
-%\item \blindtext
-%\end{enumerate}
-%\begin{description}
-%\item [Ant] \blindtext
-%\item [Elephant] \blindtext
-
-%\textbf{greatest} 
-%\underline{science} 
-%\textbf{\textit{accident}}.
 
 
 \end{document}
