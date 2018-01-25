@@ -3,9 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
-
--- Généré le :  mer. 24 jan. 2018 à 20:41
-
+-- Généré le :  mer. 24 jan. 2018 à 13:18
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -15,8 +13,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `Partajeux`
 --
-CREATE DATABASE IF NOT EXISTS `Partajeux` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `Partajeux`;
 
 -- --------------------------------------------------------
 
@@ -24,7 +20,6 @@ USE `Partajeux`;
 -- Structure de la table `Console`
 --
 
-DROP TABLE IF EXISTS `Console`;
 CREATE TABLE `Console` (
   `idConsole` int(11) NOT NULL,
   `NomConsole` varchar(20) NOT NULL
@@ -50,7 +45,6 @@ INSERT INTO `Console` (`idConsole`, `NomConsole`) VALUES
 -- Structure de la table `ConsoleDispo`
 --
 
-DROP TABLE IF EXISTS `ConsoleDispo`;
 CREATE TABLE `ConsoleDispo` (
   `idConsole` int(11) NOT NULL,
   `idJeux` int(11) NOT NULL
@@ -110,7 +104,6 @@ INSERT INTO `ConsoleDispo` (`idConsole`, `idJeux`) VALUES
 -- Structure de la table `Echange`
 --
 
-DROP TABLE IF EXISTS `Echange`;
 CREATE TABLE `Echange` (
   `Lieu` varchar(45) NOT NULL,
   `Date` datetime NOT NULL,
@@ -132,7 +125,6 @@ CREATE TABLE `Echange` (
 -- Structure de la table `Jeux`
 --
 
-DROP TABLE IF EXISTS `Jeux`;
 CREATE TABLE `Jeux` (
   `idJeux` int(11) NOT NULL,
   `NomJeux` varchar(45) NOT NULL,
@@ -165,7 +157,6 @@ INSERT INTO `Jeux` (`idJeux`, `NomJeux`, `Description`, `Année`) VALUES
 -- Structure de la table `JeuxVoulu`
 --
 
-DROP TABLE IF EXISTS `JeuxVoulu`;
 CREATE TABLE `JeuxVoulu` (
   `idUtilisateur` int(11) NOT NULL,
   `idJeux` int(11) NOT NULL,
@@ -208,7 +199,6 @@ INSERT INTO `JeuxVoulu` (`idUtilisateur`, `idJeux`, `idConsole`) VALUES
 -- Structure de la table `PossedeJeux`
 --
 
-DROP TABLE IF EXISTS `PossedeJeux`;
 CREATE TABLE `PossedeJeux` (
   `idJeux` int(11) NOT NULL,
   `idUtilisateur` int(11) NOT NULL,
@@ -238,7 +228,6 @@ INSERT INTO `PossedeJeux` (`idJeux`, `idUtilisateur`, `idConsole`) VALUES
 -- Structure de la table `Utilisateur`
 --
 
-DROP TABLE IF EXISTS `Utilisateur`;
 CREATE TABLE `Utilisateur` (
   `NomUtilisateur` varchar(45) NOT NULL,
   `Email` varchar(45) NOT NULL,

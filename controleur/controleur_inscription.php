@@ -16,13 +16,14 @@ if(isset($_POST['inscription']))
         // Verification du pseudo
         if($Test_pseudo)
         { 
-           
+          include($_SERVER['DOCUMENT_ROOT'].'/Partajeux/vue/vue_inscription.php'); 
           ?>  <script> afficher("bad_id"); </script> <?php
             
         }
         // Verification du mot de passe
-        if($_POST['Mdp'] != $_POST['verif_pass'])
+        else if($_POST['Mdp'] != $_POST['verif_pass'])
         {
+            include($_SERVER['DOCUMENT_ROOT'].'/Partajeux/vue/vue_inscription.php');
             ?>  <script> afficher("bad_mdp"); </script> <?php
         }
          

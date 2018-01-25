@@ -1,6 +1,4 @@
- <head>
 
-</head> 
 </body>
 <div id ="footer" >
   <p>Copyright 2018</br>

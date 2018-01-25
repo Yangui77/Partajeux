@@ -5,7 +5,7 @@
 			echo "Vos jeux voulu";
 	}
 	else 
-		echo "Les jeux voulu de ". $pseudoJoueur ?></h1>
+	echo "Les jeux voulu de ". $pseudoJoueur ?></h1>
 <?php
 $Jeux = jeux($idJoueur,'JeuxVoulu');
 
