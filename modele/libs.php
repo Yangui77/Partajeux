@@ -6,8 +6,10 @@ function db_connect()
 {
     try
 	{	
+
     	//$bdd = new PDO('mysql:host=localhost;dbname=Partajeux;charset=utf8', 'root', 'root');
     	$bdd = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+
     	return $bdd;
 	}
 	
