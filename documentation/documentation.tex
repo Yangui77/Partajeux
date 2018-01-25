@@ -230,20 +230,17 @@ Formulaire d'échange & Lieu &  & *****\\
   \hline
 \end{longtable}
 
-
 \section{Modèle conceptuel de données}
-\vspace{0.5cm}
 % E-R-Diagramme
 \begin{minipage}[c]{\textwidth}
 \centering
-\includegraphics[width=\textwidth, trim=5mm 80mm 80mm 5mm, clip]{./doc/E-R-Diagrammme.pdf}
+\includegraphics[width=0.9\textwidth, trim=5mm 83mm 80mm 5mm, clip]{./doc/E-R-Diagrammme.pdf}
     %TRIM = LINKS UNTEN RECHTS OBEN
 \captionof{figure}{Modèle entité-association au début du projet}
 \label{img:er}
-\vspace{1cm}
-
+\vspace{5mm}
 % Modèle conceptuel de données FINALE
-\includegraphics[width=\textwidth, trim=5mm 80mm 80mm 5mm, clip]{./doc/E-R-Diagrammme.pdf}
+\includegraphics[width=0.9\textwidth, trim=2mm 0mm 2mm 5mm, clip]{./doc/modelBDD.png}
     %TRIM = LINKS UNTEN RECHTS OBEN
 \captionof{figure}{Modèle conceptuel de données à la fin du projet}
 \label{img:mcd}
@@ -263,8 +260,13 @@ Pour mieux nous organiser et échanger le code du programme nous avons décidé 
 Vous trouveriez plus des informations sous \url{https://github.com/} et \url{https://git-scm.com/}.\\
 
 \subsubsection{Pré-requis et instruction d'installation}
-Les pré-requis sont:  serveur Apache, Mysql 5, PHP 7.0\\
--- apache, javascript, php, html, css, mySQL, jQuery
+Les pré-requis sont:  serveur Apache 2.2.32, Mysql 5.6.35, PHP 7.1.8\\
+\\
+Installer MAMP (Mac), XAMPP (Linux ou Windows) ou WAMP (Windows).
+Placer le dossier dans le répertoire www de WAMP ou htdocs de MAMP/XAMPP.
+Notre site est en local, après avoir lancé les serveurs apache et mysql il faut accéder au localhost via l'adresse \url{http://localhost} et ensuite dans phpmyadmin importer la base de donnée stocké dans le dossier "Partajeux/BDD/bdd.sql".
+Dans le fichier "config.php" il faut modifier les accès à la base de donnée (hôte, user, mot de passe, nom de base de données).
+
 
 \subsubsection{Choix d'architecture et d'implémentation particuliers}
 Le site est codé avec une architecture Model-View-Controller (MVC) qui nous permet de séparer vue, modèle et les commandes de l'utilisateur.\\
@@ -278,6 +280,22 @@ Les contrôleurs reçoivent les requêtes de l'utilisateur et utilisent les fonc
 
 De plus nous avons utilisé la technologie AJAX pour la barre de recherche.\\
 Nous avons décidé de ne pas utiliser de framework car nos connaissances/compétences étaient insuffisants en considérant le temps qu'il restait pour le projet.\\
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=\textwidth, trim=5mm 5mm 140mm 35mm, clip]{./doc/structure.pdf}
+	%TRIM = LINKS UNTEN RECHTS OBEN
+	\caption{Structure du programme}
+	\label{pdacc}
+\end{figure}
+\vspace{1cm}
+
+\textbf{La structure}\\
+La structure du programme est présentée dans le diagramme ci-dessus.\\
+\\
+Toutes les pages sont affichés à partir du fichier "index.php" : Le fichier "index.php" reçoit les informations de la vue et appelle le contrôleur concerné. Il sert aussi de template à chaque page du site car il intègre le header et le footer du site.\\
+La vue correspondante à la page affichée récupère les requêtes de l'utilisateur et les renvoie vers le fichier "index.php". À chaque appelle du fichier "index.php", un contrôleur sera utilisé en fonction de la commande envoyé par la vue. Le contrôleur utilise ensuite le modèle pour le choix des vues (contenu du site) à afficher.\\
+Les vues peuvent utiliser le modèle ultérieurement pour afficher les informations voulues.\\
 
 \newpage
 \subsection{Documentation utilisateurs}
