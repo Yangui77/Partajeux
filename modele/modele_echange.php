@@ -2,7 +2,7 @@
 include_once($_SERVER['DOCUMENT_ROOT'].'/Partajeux/modele/libs.php');
 
 
-//fonction qui afficher nos jeux voulu
+//fonction qui affiche nos jeux voulu
 function array_jeux_voulu($idUtilisateur){
 
 	$bdd = db_connect();
@@ -12,6 +12,7 @@ function array_jeux_voulu($idUtilisateur){
 	 return $jeu_voulu;
 
 	  }
+	  //fonction qui affiche les jeux possédé de l'utilisateur
 function array_jeux_possede($idUtilisateur){
 
 	$bdd = db_connect();
@@ -35,7 +36,7 @@ function joueur_possede_jeux_voulu($idUtilisateur){
 }
 
 
-
+//fonction qui affiche les jeux echangeable
 function afficher_jeux_voulu_echange($idUtilisateur1,$idUtilisateur2){
 $bdd = db_connect();
 	  $req = $bdd->prepare('SELECT Distinct PossedeJeux.idJeux, PossedeJeux.idConsole FROM PossedeJeux,JeuxVoulu WHERE PossedeJeux.idJeux = JeuxVoulu.idJeux AND JeuxVoulu.idUtilisateur = :idUtilisateur1 AND PossedeJeux.idUtilisateur = :idUtilisateur2');
